@@ -400,7 +400,7 @@ f32 vec3f_dist_sq(Vec3f p1, Vec3f p2)
     return (dx * dx) + (dy * dy) + (dz * dz);
 }
 
-#define MAX_POINT_LIGHT_DIST (3000)
+#define MAX_POINT_LIGHT_DIST (40000)
 
 #include "src/engine/surface_collision.h"
 
