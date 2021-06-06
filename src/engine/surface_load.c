@@ -444,7 +444,7 @@ static void load_static_surfaces(s16 **data, s16 *vertexData, s16 surfaceType, s
     s32 numSurfaces;
     struct Surface *surface;
     s8 room = 0;
-    s16 hasForce = surface_has_force(surfaceType);
+    s16 hasForce = TRUE;
     s16 flags = surf_has_no_cam_collision(surfaceType);
 
     numSurfaces = *(*data);
