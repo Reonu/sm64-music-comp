@@ -1,0 +1,13 @@
+const Collision bob_area_1_collision[] = {
+	COL_INIT(),
+	COL_VERTEX_INIT(4),
+	COL_VERTEX(-5539, 100, 5530),
+	COL_VERTEX(5595, 100, 5530),
+	COL_VERTEX(5595, 100, -5604),
+	COL_VERTEX(-5539, 100, -5604),
+	COL_TRI_INIT(SURFACE_DEFAULT, 2),
+	COL_TRI(0, 1, 2),
+	COL_TRI(0, 2, 3),
+	COL_TRI_STOP(),
+	COL_END()
+};
