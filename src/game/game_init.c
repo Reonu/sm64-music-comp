@@ -68,6 +68,7 @@ u8 gIsConsole;
 #ifdef WIDE
 u8 gWidescreen;
 #endif
+u8 gCustomCameraMode;
 
 u16 sCurrFBNum = 0;
 u16 frameBufferIndex = 0;
