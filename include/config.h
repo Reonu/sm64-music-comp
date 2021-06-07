@@ -49,7 +49,7 @@
 // When this option is enabled, LODs will ONLY work on console.
 // When this option is disabled, LODs will work regardless of whether console or emulator is used.
 // Regardless of whether this setting is enabled or not, you can use gIsConsole to wrap your own code in a console check.
-#define AUTO_LOD
+//#define AUTO_LOD
 // Skip peach letter cutscene
 #define PEACH_SKIP
 // Remove course specific camera processing
