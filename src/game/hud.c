@@ -298,6 +298,7 @@ void render_hud_power_meter(void) {
 #else
 #define HUD_TOP_Y 209
 #endif
+#define HUD_BOTTOM_Y 20
 
 /**
  * Renders the amount of lives Mario has.
@@ -306,6 +307,18 @@ void render_hud_mario_lives(void) {
     print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y, ","); // 'Mario Head' glyph
     print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(38), HUD_TOP_Y, "*"); // 'X' glyph
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(54), HUD_TOP_Y, "%d", gHudDisplay.lives);
+}
+
+void render_debug_mode(void) {
+    print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(170), HUD_BOTTOM_Y, "DEBUG MODE");
+    print_text(10,60,"Z");
+    print_text_fmt_int(25, 60, "%d", gMarioState->pos[2]);
+    print_text(10,80,"Y");
+    print_text_fmt_int(25, 80, "%d", gMarioState->pos[1]);
+    print_text(10,100,"X");
+    print_text_fmt_int(25, 100, "%d", gMarioState->pos[0]);
+    print_text_fmt_int(10, 120, "%d", gCustomCameraMode);
+    print_fps(10,160);
 }
 
 /**
@@ -523,6 +536,8 @@ void render_hud(void) {
         {
             print_text(10, 60, "SURFACE NODE POOL FULL");
         }
-        print_fps(20,20);
+        if (gCustomDebugMode) {
+            render_debug_mode();
+        }
     }
 }

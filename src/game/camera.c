@@ -981,11 +981,15 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //2D camera
             gCustomCameraMode = 1;
             s8DirModeYawOffset = 0;
+            pitch = DEGREES(1);
+            baseDist = 1300.0f;
             break;
         case 0x07:
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Top-down camera
             gCustomCameraMode = 1;
             s8DirModeYawOffset = 0;
+            pitch = DEGREES(50);
+            baseDist = 2000.0f;
             break;
         case 0x08:
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(0), 0.2f); //Inverted 2D camera
@@ -996,9 +1000,16 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Normal camera looking up
             gCustomCameraMode = 1;
             s8DirModeYawOffset = 0;
+            pitch = DEGREES(-35);
+            baseDist = (3000.0f + ((gMarioState->pos[1] - -6415)/2));
+            //print_text_fmt_int(10, 160, "%d", baseDist);
             break;
         case 0x0A:
             gCustomCameraMode = 0;
+            break;
+        default:
+            pitch = look_down_slopes(camYaw);
+            baseDist = 1000.0f;
             break;
         }          
 
