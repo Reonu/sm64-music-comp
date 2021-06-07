@@ -394,23 +394,7 @@ static struct Surface *read_surface_data(s16 *vertexData, s16 **vertexIndices) {
  * based on the surface type.
  */
 static s32 surface_has_force(s16 surfaceType) {
-    s32 hasForce = FALSE;
-
-    switch (surfaceType) {
-        case SURFACE_0004: // Unused
-        case SURFACE_FLOWING_WATER:
-        case SURFACE_DEEP_MOVING_QUICKSAND:
-        case SURFACE_SHALLOW_MOVING_QUICKSAND:
-        case SURFACE_MOVING_QUICKSAND:
-        case SURFACE_HORIZONTAL_WIND:
-        case SURFACE_INSTANT_MOVING_QUICKSAND:
-            hasForce = TRUE;
-            break;
-
-        default:
-            break;
-    }
-    return hasForce;
+    return TRUE;
 }
 
 /**
@@ -444,7 +428,6 @@ static void load_static_surfaces(s16 **data, s16 *vertexData, s16 surfaceType, s
     s32 numSurfaces;
     struct Surface *surface;
     s8 room = 0;
-    s16 hasForce = TRUE;
     s16 flags = surf_has_no_cam_collision(surfaceType);
 
     numSurfaces = *(*data);
@@ -462,19 +445,12 @@ static void load_static_surfaces(s16 **data, s16 *vertexData, s16 surfaceType, s
             surface->type = surfaceType;
             surface->flags = (s8) flags;
 
-            if (hasForce) {
-                surface->force = *(*data + 3);
-            } else {
-                surface->force = 0;
-            }
+            surface->force = *(*data + 3);
 
             add_surface(surface, FALSE);
         }
 
-        *data += 3;
-        if (hasForce) {
-            *data += 1;
-        }
+        *data += 4;
     }
 }
 
@@ -709,7 +685,6 @@ void load_object_surfaces(s16 **data, s16 *vertexData) {
     s32 surfaceType;
     s32 i;
     s32 numSurfaces;
-    s16 hasForce;
     s16 flags;
     s16 room;
 
@@ -718,8 +693,6 @@ void load_object_surfaces(s16 **data, s16 *vertexData) {
 
     numSurfaces = *(*data);
     (*data)++;
-
-    hasForce = surface_has_force(surfaceType);
 
     flags = surf_has_no_cam_collision(surfaceType);
     flags |= SURFACE_FLAG_DYNAMIC;
@@ -739,22 +712,13 @@ void load_object_surfaces(s16 **data, s16 *vertexData) {
             surface->object = gCurrentObject;
             surface->type = surfaceType;
 
-            if (hasForce) {
-                surface->force = *(*data + 3);
-            } else {
-                surface->force = 0;
-            }
-
+            surface->force = *(*data + 3);
             surface->flags |= flags;
             surface->room = (s8) room;
             add_surface(surface, TRUE);
         }
 
-        if (hasForce) {
-            *data += 4;
-        } else {
-            *data += 3;
-        }
+        *data += 4;
     }
 }
 
