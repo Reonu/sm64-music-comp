@@ -1570,7 +1570,6 @@ Gfx mat_toad_headphones_ToadJacket[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetEnvColor(12, 0, 254, 255),
 	gsSPEndDisplayList(),
 };
 
@@ -1591,9 +1590,8 @@ Gfx mat_toad_headphones_ToadFace[] = {
 
 Gfx mat_toad_headphones_ToadShirt[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1, PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetEnvColor(254, 254, 254, 255),
 	gsSPEndDisplayList(),
 };
 
@@ -1614,17 +1612,17 @@ Gfx mat_toad_headphones_ToadHead[] = {
 
 Gfx mat_toad_headphones_Black[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1, PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetEnvColor(23, 23, 23, 255),
+	gsDPSetPrimColor(0, 0, 23, 23, 23, 255),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_toad_headphones_Gray[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, ENVIRONMENT, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1, PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetEnvColor(96, 96, 96, 255),
+	gsDPSetPrimColor(0, 0, 97, 97, 97, 255),
 	gsSPEndDisplayList(),
 };
 

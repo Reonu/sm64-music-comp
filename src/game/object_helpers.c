@@ -126,6 +126,40 @@ Gfx *geo_update_layer_transparency(s32 callContext, struct GraphNode *node, UNUS
     return dlStart;
 }
 
+Gfx *geo_set_toad_colors(s32 callContext, struct GraphNode *node, UNUSED void *context) {
+    Gfx *dlStart, *dlHead;
+    struct Object *objectGraphNode;
+    struct GraphNodeGenerated *currentGraphNode;
+    u8 layer;
+    dlStart = NULL;
+    // You'd set the flags to 7 << 8 to make it affect layer 7
+    if (callContext == GEO_CONTEXT_RENDER) {
+        currentGraphNode = (struct GraphNodeGenerated *) node;
+        objectGraphNode = (struct Object *) gCurGraphNodeObject; // TODO: change this to object pointer
+        layer = currentGraphNode->parameter & 0xFF;
+
+        if (layer != 0) {
+            currentGraphNode->fnNode.node.flags =
+                (layer << 8) | (currentGraphNode->fnNode.node.flags & 0xFF);
+        }
+    
+        dlStart = alloc_display_list(sizeof(Gfx) * 3);
+        dlHead = dlStart;
+        // shirt
+        u8 r = (objectGraphNode->oEnvRGB >> 16) & 0xff;
+        u8 g = (objectGraphNode->oEnvRGB >> 8) & 0xff;
+        u8 b = objectGraphNode->oEnvRGB & 0xff;
+        u8 r2 = (objectGraphNode->oPrimRGB >> 16) & 0xff;
+        u8 g2 = (objectGraphNode->oPrimRGB >> 8) & 0xff;
+        u8 b2 = objectGraphNode->oPrimRGB & 0xff;
+        gDPSetEnvColor(dlHead++, r, g, b, 255);
+        // undershirt
+        gDPSetPrimColor(dlHead++, 0, 0, r, g, b, 255);
+        gSPEndDisplayList(dlHead);
+    }
+    return dlStart;
+}
+
 /**
  * @bug Every geo function declares the 3 parameters of callContext, node, and
  * the matrix array. This one (see also geo_switch_area) doesn't. When executed,

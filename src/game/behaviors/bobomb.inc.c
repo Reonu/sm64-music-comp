@@ -282,6 +282,8 @@ void bhv_bobomb_buddy_init(void) {
     o->oFriction = 0.8;
     o->oBuoyancy = 1.3;
     o->oInteractionSubtype = INT_SUBTYPE_NPC;
+    o->oEnvRGB = 0x0000FF00;
+    o->oPrimRGB = 0x0000FF00;
 }
 
 void bobomb_buddy_act_idle(void) {

@@ -1178,13 +1178,15 @@ const BehaviorScript bhvLllTumblingBridge[] = {
 
 const BehaviorScript bhvFlame[] = {
     BEGIN(OBJ_LIST_LEVEL),
-    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_EMIT_LIGHT),
     BILLBOARD(),
     SET_HOME(),
-    SCALE(/*Unused*/ 0, /*Field*/ 700),
+    SCALE(/*Unused*/ 0, /*Field*/ 350),
     SET_INTERACT_TYPE(INTERACT_FLAME),
     SET_HITBOX_WITH_OFFSET(/*Radius*/ 50, /*Height*/ 25, /*Downwards offset*/ 25),
     SET_INT(oIntangibleTimer, 0),
+    SET_LIGHT_COLOR(255,150,50),
+    SET_LIGHT_FALLOFF(0,0, 80),
     CALL_NATIVE(bhv_init_room),
     BEGIN_LOOP(),
         SET_INT(oInteractStatus, 0),
