@@ -154,7 +154,7 @@ Gfx *geo_set_toad_colors(s32 callContext, struct GraphNode *node, UNUSED void *c
         u8 b2 = objectGraphNode->oPrimRGB & 0xff;
         gDPSetEnvColor(dlHead++, r, g, b, 255);
         // undershirt
-        gDPSetPrimColor(dlHead++, 0, 0, r, g, b, 255);
+        gDPSetPrimColor(dlHead++, 0, 0, r2, g2, b2, 255);
         gSPEndDisplayList(dlHead);
     }
     return dlStart;

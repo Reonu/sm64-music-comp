@@ -70,7 +70,7 @@ extern Vtx castle_grounds_dl_Island_mesh_layer_1_vtx_9[8];
 extern Gfx castle_grounds_dl_Island_mesh_layer_1_tri_9[];
 extern Vtx castle_grounds_dl_Island_mesh_layer_1_vtx_10[87];
 extern Gfx castle_grounds_dl_Island_mesh_layer_1_tri_10[];
-extern Vtx castle_grounds_dl_Island_mesh_layer_1_vtx_11[62];
+extern Vtx castle_grounds_dl_Island_mesh_layer_1_vtx_11[52];
 extern Gfx castle_grounds_dl_Island_mesh_layer_1_tri_11[];
 extern Vtx castle_grounds_dl_Island_mesh_layer_1_vtx_12[23];
 extern Gfx castle_grounds_dl_Island_mesh_layer_1_tri_12[];
