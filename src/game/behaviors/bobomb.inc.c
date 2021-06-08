@@ -414,7 +414,8 @@ void bobomb_buddy_actions(void) {
 
 void bhv_bobomb_buddy_loop(void) {
     bobomb_buddy_actions();
-
+    u8 bparam1 = (o->oBehParams >> 24) & 0xFF;
+    cur_obj_init_animation(bparam1);
     curr_obj_random_blink(&o->oBobombBuddyBlinkTimer);
 
     o->oInteractStatus = 0;

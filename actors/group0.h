@@ -346,4 +346,8 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "lantern/geo_header.h"
 
+#include "toad_headphones/geo_header.h"
+
+
+#include "toad_headphones/anim_header.h"
 #endif

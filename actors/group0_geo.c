@@ -18,3 +18,4 @@
 #include "mario/geo.inc.c"
 
 #include "lantern/geo.inc.c"
+#include "toad_headphones/geo.inc.c"

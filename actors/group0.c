@@ -31,3 +31,7 @@
 #include FONT_C_FILE
 #endif
 #include "lantern/model.inc.c"
+
+#include "toad_headphones/model.inc.c"
+#include "toad_headphones/anims/data.inc.c"
+#include "toad_headphones/anims/table.inc.c"
