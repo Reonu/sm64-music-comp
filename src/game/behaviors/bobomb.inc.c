@@ -1,4 +1,5 @@
 // bobomb.c.inc
+#include "point_lights.h"
 
 static struct ObjectHitbox sBobombHitbox = {
     /* interactType:      */ INTERACT_GRABBABLE,
@@ -419,6 +420,12 @@ void bhv_bobomb_buddy_loop(void) {
     u8 bparam1 = (o->oBehParams >> 24) & 0xFF;
     cur_obj_init_animation(bparam1);
     curr_obj_random_blink(&o->oBobombBuddyBlinkTimer);
+
+    u8 r = (o->oPrimRGB >> 16) & 0xff;
+    u8 g = (o->oPrimRGB >> 8) & 0xff;
+    u8 b = o->oPrimRGB & 0xff;
+    Vec3f pos = {o->oPosX, o->oPosY + 300, o->oPosZ};
+    emit_light(pos, r, g, b, 0, 0, 90);
 
     o->oInteractStatus = 0;
 }

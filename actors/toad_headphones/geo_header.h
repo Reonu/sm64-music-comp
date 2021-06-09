@@ -1,6 +1,6 @@
 extern const GeoLayout toad_headphones_geo[];
 extern u8 toad_headphones__26E73DFA_c_rgba16[];
-extern u8 toad_headphones_Toad_spot_BW_i8[];
+extern u8 toad_headphones_unknown_i8[];
 extern u8 toad_headphones_da412ee5_rgba16[];
 extern Vtx toad_headphones_Torso_mesh_layer_1_vtx_0[33];
 extern Gfx toad_headphones_Torso_mesh_layer_1_tri_0[];
