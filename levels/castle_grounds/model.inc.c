@@ -1,7 +1,3 @@
-Lights1 castle_grounds_dl_waterTransparent_layer5_lights = gdSPDefLights1(
-	0x7F, 0x7F, 0x7F,
-	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
-
 Gfx castle_grounds_dl_cobblestone_floor_yellow_ci4_aligner[] = {gsSPEndDisplayList()};
 u8 castle_grounds_dl_cobblestone_floor_yellow_ci4[] = {
 	0x00, 0x10, 0x12, 0x22, 0x21, 0x03, 0x10, 0x30, 
@@ -11649,10 +11645,12 @@ Vtx castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_cull[8] = {
 };
 
 Vtx castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_0[20] = {
-	{{{5319, 3978, -15938},0, {26, 402},{0x0, 0x7F, 0x0, 0x1}}},
-	{{{6147, 3978, -15300},0, {84, 328},{0x0, 0x7F, 0x0, 0x35}}},
-	{{{5842, 3978, -15938},0, {26, 355},{0x0, 0x7F, 0x0, 0xF}}},
 	{{{5523, 3978, -15300},0, {84, 384},{0x0, 0x7F, 0x0, 0xFE}}},
+	{{{7628, 3978, -8694},0, {682, 193},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{9298, 3978, -8694},0, {682, 42},{0x0, 0x7F, 0x0, 0x1}}},
+	{{{6147, 3978, -15300},0, {84, 328},{0x0, 0x7F, 0x0, 0x35}}},
+	{{{5319, 3978, -15938},0, {26, 402},{0x0, 0x7F, 0x0, 0x1}}},
+	{{{5842, 3978, -15938},0, {26, 355},{0x0, 0x7F, 0x0, 0xF}}},
 	{{{4797, 3978, -15938},0, {26, 450},{0x0, 0x7F, 0x0, 0x0}}},
 	{{{4899, 3978, -15300},0, {84, 441},{0x0, 0x7F, 0x0, 0xFD}}},
 	{{{4468, 3978, -15300},0, {84, 480},{0x0, 0x7F, 0x0, 0xFF}}},
@@ -11667,25 +11665,34 @@ Vtx castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_0[20] = {
 	{{{2404, 3978, -15300},0, {84, 667},{0x0, 0x7F, 0x0, 0x42}}},
 	{{{946, 3978, -8694},0, {682, 799},{0x0, 0x7F, 0x0, 0xFF}}},
 	{{{-724, 3978, -8694},0, {682, 950},{0x0, 0x7F, 0x0, 0x1F}}},
-	{{{9298, 3978, -8694},0, {682, 42},{0x0, 0x7F, 0x0, 0x1}}},
-	{{{7628, 3978, -8694},0, {682, 193},{0x0, 0x7F, 0x0, 0xFF}}},
 };
 
 Gfx castle_grounds_dl_Z_Exit_mesh_layer_5_tri_0[] = {
 	gsSPVertex(castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_0 + 0, 20, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(4, 3, 0, 0, 4, 5, 3, 0),
-	gsSP2Triangles(6, 5, 4, 0, 6, 4, 7, 0),
-	gsSP2Triangles(8, 6, 7, 0, 8, 7, 9, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
+	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
+	gsSP2Triangles(6, 0, 4, 0, 6, 7, 0, 0),
+	gsSP2Triangles(8, 7, 6, 0, 8, 6, 9, 0),
 	gsSP2Triangles(10, 8, 9, 0, 10, 9, 11, 0),
-	gsSP2Triangles(10, 11, 12, 0, 10, 12, 13, 0),
-	gsSP2Triangles(13, 12, 14, 0, 13, 14, 15, 0),
-	gsSP2Triangles(16, 13, 15, 0, 16, 15, 17, 0),
-	gsSP2Triangles(3, 18, 1, 0, 3, 19, 18, 0),
+	gsSP2Triangles(12, 10, 11, 0, 12, 11, 13, 0),
+	gsSP2Triangles(12, 13, 14, 0, 12, 14, 15, 0),
+	gsSP2Triangles(15, 14, 16, 0, 15, 16, 17, 0),
+	gsSP2Triangles(18, 15, 17, 0, 18, 17, 19, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_1[12] = {
+Vtx castle_grounds_dl_Z_Exit_001_mesh_layer_1_vtx_cull[8] = {
+	{{{946, 3978, -15300},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{946, 3978, -8694},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{946, 3978, -8694},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{946, 3978, -15300},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7628, 3978, -15300},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7628, 3978, -8694},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7628, 3978, -8694},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7628, 3978, -15300},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+};
+
+Vtx castle_grounds_dl_Z_Exit_001_mesh_layer_1_vtx_0[12] = {
 	{{{4899, 3978, -15300},0, {84, 441},{0x0, 0x7F, 0x0, 0xFD}}},
 	{{{7628, 3978, -8694},0, {682, 193},{0x0, 0x7F, 0x0, 0xFF}}},
 	{{{5523, 3978, -15300},0, {84, 384},{0x0, 0x7F, 0x0, 0xFE}}},
@@ -11700,8 +11707,8 @@ Vtx castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_1[12] = {
 	{{{946, 3978, -8694},0, {682, 799},{0x0, 0x7F, 0x0, 0xFF}}},
 };
 
-Gfx castle_grounds_dl_Z_Exit_mesh_layer_5_tri_1[] = {
-	gsSPVertex(castle_grounds_dl_Z_Exit_mesh_layer_5_vtx_1 + 0, 12, 0),
+Gfx castle_grounds_dl_Z_Exit_001_mesh_layer_1_tri_0[] = {
+	gsSPVertex(castle_grounds_dl_Z_Exit_001_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 6, 5, 7, 0),
@@ -11953,15 +11960,15 @@ Vtx castle_grounds_dl_Z_Water_mesh_layer_1_vtx_cull[8] = {
 };
 
 Vtx castle_grounds_dl_Z_Water_mesh_layer_1_vtx_0[9] = {
-	{{{-4157, -21, 15950},0, {7342, 1503},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{43, -21, 13782},0, {1008, 4774},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{-4157, -21, 13782},0, {7342, 4774},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{43, -21, 15950},0, {1008, 1503},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{-4157, -21, 18119},0, {7342, -1768},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{43, -21, 18119},0, {1008, -1768},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{4242, -21, 15950},0, {-5326, 1503},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{4242, -21, 18119},0, {-5326, -1768},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{4242, -21, 13782},0, {-5326, 4774},{0xFF, 0xFF, 0xFF, 0xFF}}},
+	{{{-4157, -21, 15950},0, {7342, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{43, -21, 13782},0, {1008, 4774},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-4157, -21, 13782},0, {7342, 4774},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{43, -21, 15950},0, {1008, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-4157, -21, 18119},0, {7342, -1768},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{43, -21, 18119},0, {1008, -1768},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{4242, -21, 15950},0, {-5326, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{4242, -21, 18119},0, {-5326, -1768},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{4242, -21, 13782},0, {-5326, 4774},{0x0, 0x7F, 0x0, 0xFF}}},
 };
 
 Gfx castle_grounds_dl_Z_Water_mesh_layer_1_tri_0[] = {
@@ -11984,37 +11991,41 @@ Vtx castle_grounds_dl_Z_Water_mesh_layer_5_vtx_cull[8] = {
 	{{{8442, -21, 13782},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
 };
 
-Vtx castle_grounds_dl_Z_Water_mesh_layer_5_vtx_0[18] = {
-	{{{-8356, -21, 15950},0, {13676, 1503},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{-4157, -21, 13782},0, {7342, 4774},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{-8356, -21, 13782},0, {13676, 4774},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{-4157, -21, 15950},0, {7342, 1503},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{-8356, -21, 18119},0, {13676, -1768},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{-4157, -21, 18119},0, {7342, -1768},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{-8356, -21, 20288},0, {13676, -5039},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{-4157, -21, 20288},0, {7342, -5039},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{43, -21, 18119},0, {1008, -1768},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{43, -21, 20288},0, {1008, -5039},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{4242, -21, 18119},0, {-5326, -1768},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{4242, -21, 20288},0, {-5326, -5039},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{8442, -21, 20288},0, {-11660, -5039},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{8442, -21, 18119},0, {-11660, -1768},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{8442, -21, 15950},0, {-11660, 1503},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{4242, -21, 15950},0, {-5326, 1503},{0xFF, 0xFF, 0xFF, 0xFF}}},
-	{{{8442, -21, 13782},0, {-11660, 4774},{0xFF, 0xFF, 0xFF, 0x0}}},
-	{{{4242, -21, 13782},0, {-5326, 4774},{0xFF, 0xFF, 0xFF, 0xFF}}},
+Vtx castle_grounds_dl_Z_Water_mesh_layer_5_vtx_0[22] = {
+	{{{4242, -21, 18119},0, {-5326, -1768},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{8442, -21, 15950},0, {-11660, 1503},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{4242, -21, 15950},0, {-5326, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{8442, -21, 18119},0, {-11660, -1768},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{8442, -21, 20288},0, {-11660, -5039},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{4242, -21, 20288},0, {-5326, -5039},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{43, -21, 20288},0, {1008, -5039},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{43, -21, 18119},0, {1008, -1768},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-4157, -21, 20288},0, {7342, -5039},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{-4157, -21, 18119},0, {7342, -1768},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-8356, -21, 20288},0, {13676, -5039},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{-8356, -21, 18119},0, {13676, -1768},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{-4157, -21, 15950},0, {7342, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-8356, -21, 15950},0, {13676, 1503},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{-8356, -21, 15950},0, {13676, 1503},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{-4157, -21, 15950},0, {7342, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-4157, -21, 13782},0, {7342, 4774},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-8356, -21, 13782},0, {13676, 4774},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{4242, -21, 15950},0, {-5326, 1503},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{8442, -21, 15950},0, {-11660, 1503},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{8442, -21, 13782},0, {-11660, 4774},{0x0, 0x7F, 0x0, 0x0}}},
+	{{{4242, -21, 13782},0, {-5326, 4774},{0x0, 0x7F, 0x0, 0xFF}}},
 };
 
 Gfx castle_grounds_dl_Z_Water_mesh_layer_5_tri_0[] = {
-	gsSPVertex(castle_grounds_dl_Z_Water_mesh_layer_5_vtx_0 + 0, 18, 0),
+	gsSPVertex(castle_grounds_dl_Z_Water_mesh_layer_5_vtx_0 + 0, 22, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(4, 3, 0, 0, 4, 5, 3, 0),
-	gsSP2Triangles(6, 5, 4, 0, 6, 7, 5, 0),
-	gsSP2Triangles(7, 8, 5, 0, 7, 9, 8, 0),
-	gsSP2Triangles(9, 10, 8, 0, 9, 11, 10, 0),
-	gsSP2Triangles(12, 10, 11, 0, 12, 13, 10, 0),
-	gsSP2Triangles(10, 13, 14, 0, 10, 14, 15, 0),
-	gsSP2Triangles(15, 14, 16, 0, 15, 16, 17, 0),
+	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
+	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
+	gsSP2Triangles(8, 6, 7, 0, 8, 7, 9, 0),
+	gsSP2Triangles(10, 8, 9, 0, 10, 9, 11, 0),
+	gsSP2Triangles(11, 9, 12, 0, 11, 12, 13, 0),
+	gsSP2Triangles(14, 15, 16, 0, 14, 16, 17, 0),
+	gsSP2Triangles(18, 19, 20, 0, 18, 20, 21, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -12841,10 +12852,9 @@ Gfx mat_revert_castle_grounds_dl_multitextured_grass_opaque_layer1[] = {
 
 Gfx mat_castle_grounds_dl_waterOpaque_layer1[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, 0, 0, 0, 0, 0, TEXEL0, 0, TEXEL1, ENVIRONMENT, 0, 0, 0, 1),
-	gsSPClearGeometryMode(G_LIGHTING),
+	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, ENVIRONMENT, 0, 0, 0, 1, COMBINED, 0, SHADE, 0, 0, 0, 0, 1),
 	gsDPSetCycleType(G_CYC_2CYCLE),
-	gsDPSetRenderMode(G_RM_PASS, G_RM_AA_ZB_XLU_SURF2),
+	gsDPSetRenderMode(G_RM_PASS, G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPTileSync(),
 	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b, 32, castle_grounds_dl_wise2_i4),
@@ -12862,13 +12872,12 @@ Gfx mat_castle_grounds_dl_waterOpaque_layer1[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_4b, 4, 256, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(1, 0, 0, 252, 252),
-	gsDPSetEnvColor(63, 119, 254, 187),
+	gsDPSetEnvColor(48, 82, 125, 255),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_revert_castle_grounds_dl_waterOpaque_layer1[] = {
 	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
 	gsDPSetRenderMode(G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
@@ -12876,8 +12885,7 @@ Gfx mat_revert_castle_grounds_dl_waterOpaque_layer1[] = {
 
 Gfx mat_castle_grounds_dl_waterTransparent_layer5[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, 0, 0, 0, 0, 0, TEXEL0, 0, TEXEL1, ENVIRONMENT, 0, 0, 0, SHADE),
-	gsSPClearGeometryMode(G_LIGHTING),
+	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, ENVIRONMENT, 0, 0, 0, SHADE, COMBINED, 0, SHADE, 0, COMBINED, 0, 0, SHADE),
 	gsDPSetCycleType(G_CYC_2CYCLE),
 	gsDPSetRenderMode(G_RM_PASS, G_RM_AA_ZB_XLU_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -12897,14 +12905,12 @@ Gfx mat_castle_grounds_dl_waterTransparent_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_4b, 4, 256, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(1, 0, 0, 252, 252),
-	gsDPSetEnvColor(64, 119, 254, 187),
-	gsSPSetLights1(castle_grounds_dl_waterTransparent_layer5_lights),
+	gsDPSetEnvColor(48, 82, 125, 255),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_revert_castle_grounds_dl_waterTransparent_layer5[] = {
 	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
 	gsDPSetRenderMode(G_RM_AA_ZB_XLU_SURF, G_RM_AA_ZB_XLU_SURF2),
 	gsSPEndDisplayList(),
@@ -13248,8 +13254,16 @@ Gfx castle_grounds_dl_Z_Exit_mesh_layer_5[] = {
 	gsSPDisplayList(mat_castle_grounds_dl_multitextured_grass_fade_layer5),
 	gsSPDisplayList(castle_grounds_dl_Z_Exit_mesh_layer_5_tri_0),
 	gsSPDisplayList(mat_revert_castle_grounds_dl_multitextured_grass_fade_layer5),
+	gsSPEndDisplayList(),
+};
+
+Gfx castle_grounds_dl_Z_Exit_001_mesh_layer_1[] = {
+	gsSPClearGeometryMode(G_LIGHTING),
+	gsSPVertex(castle_grounds_dl_Z_Exit_001_mesh_layer_1_vtx_cull + 0, 8, 0),
+	gsSPSetGeometryMode(G_LIGHTING),
+	gsSPCullDisplayList(0, 7),
 	gsSPDisplayList(mat_castle_grounds_dl_multitextured_grass_opaque_layer1),
-	gsSPDisplayList(castle_grounds_dl_Z_Exit_mesh_layer_5_tri_1),
+	gsSPDisplayList(castle_grounds_dl_Z_Exit_001_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_castle_grounds_dl_multitextured_grass_opaque_layer1),
 	gsSPEndDisplayList(),
 };
