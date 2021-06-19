@@ -4,6 +4,10 @@ const GeoLayout bob_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -645, -7169, 24737, bob_dl_Plane_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 7804, -6841, 18038, bob_dl_Platform_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -645, -7169, 24737, bob_dl_Rocks_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -645, -7169, 26172, bob_dl_TallRockVisual_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 9482, -5970, 17424, bob_dl_TallRockVisual_001_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

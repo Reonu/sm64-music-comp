@@ -116,6 +116,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_HMC_WOODEN_DOOR,         wooden_door_geo),
     LOAD_MODEL_FROM_GEO(MODEL_TOAD_HEADPHONES,         toad_headphones_geo),
     LOAD_MODEL_FROM_GEO(MODEL_CASTLE_GROUNDS_BUBBLY_TREE, bubbly_tree_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_WHOMP,                    whomp_geo),
     FREE_LEVEL_POOL(),
     CALL(/*arg*/ 0, /*func*/ lvl_init_from_save_file),
     LOOP_BEGIN(),

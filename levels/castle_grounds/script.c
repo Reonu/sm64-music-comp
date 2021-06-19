@@ -69,7 +69,7 @@ const LevelScript level_castle_grounds_entry[] = {
 		OBJECT(MODEL_TOAD_HEADPHONES, 3936, -4007, 4045, 0, 0, 0, 0x01000000, bhvToadHeadphones),
 		OBJECT(MODEL_TOAD_HEADPHONES, 3735, -4007, 8347, 0, 0, 0, 0x01000000, bhvToadHeadphones),
 		OBJECT(MODEL_TOAD_HEADPHONES, 3927, -4007, 6311, 0, 0, 0, 0x01000000, bhvToadHeadphones),
-		OBJECT(MODEL_NONE, 2649, -4007, 2061, 0, 0, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, 2649, -4007, 2152, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
 		TERRAIN(castle_grounds_area_1_collision),
 		MACRO_OBJECTS(castle_grounds_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
