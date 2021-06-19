@@ -217,6 +217,7 @@ void obj_translate_xz_random(struct Object *obj, f32 rangeLength);
 void cur_obj_set_pos_via_transform(void);
 void cur_obj_spawn_particles(struct SpawnParticlesInfo *info);
 s16 cur_obj_reflect_move_angle_off_wall(void);
+void enemy_become_2d(u8 mode, u16 distance);
 
 #define WAYPOINT_FLAGS_END -1
 #define WAYPOINT_FLAGS_INITIALIZED 0x8000

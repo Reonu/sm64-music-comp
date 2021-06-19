@@ -951,11 +951,6 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
 
     sAreaYaw = camYaw;
     calc_y_to_curr_floor(&posY, 1.f, 200.f, &focusY, 0.9f, 200.f);
-    focus_on_mario(focus, pos, posY + yOff, focusY + yOff, sLakituDist + baseDist, pitch, camYaw);
-    pan_ahead_of_player(c);
-    if (gCurrLevelArea == AREA_DDD_SUB) {
-        camYaw = clamp_positions_and_find_yaw(pos, focus, 6839.f, 995.f, 5994.f, -3945.f);
-    }
     switch ((gMarioState->floor->force >> 8) & 0xFF) {
         case 0x01:
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f);
@@ -995,6 +990,7 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(0), 0.2f); //Inverted 2D camera
             gCustomCameraMode = 1;
             s8DirModeYawOffset = 0;
+            baseDist = 1500.0f;
             break;
         case 0x09:
             s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Normal camera looking up
@@ -1012,6 +1008,12 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
             baseDist = 1000.0f;
             break;
         }          
+    focus_on_mario(focus, pos, posY + yOff, focusY + yOff, sLakituDist + baseDist, pitch, camYaw);
+    pan_ahead_of_player(c);
+    if (gCurrLevelArea == AREA_DDD_SUB) {
+        camYaw = clamp_positions_and_find_yaw(pos, focus, 6839.f, 995.f, 5994.f, -3945.f);
+    }
+
 
     return camYaw;
 }

@@ -175,7 +175,13 @@ static void fly_guy_act_shoot_fire(void) {
  */
 void bhv_fly_guy_update(void) {
     // PARTIAL_UPDATE (appears in non-roomed levels)
-
+    switch ((o->oBehParams) & 0xFF) {
+        case 0x01:
+            if (o->oDistanceToMario < 1400) {
+                o->oPosZ = gMarioState->pos[2];
+            }
+        break;
+    }   
     if (!(o->activeFlags & ACTIVE_FLAG_IN_DIFFERENT_ROOM)) {
         o->oDeathSound = SOUND_OBJ_KOOPA_FLYGUY_DEATH;
 

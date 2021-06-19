@@ -32,6 +32,10 @@
 #include "save_file.h"
 #include "sound_init.h"
 #include "rumble_init.h"
+#include "levels/castle_grounds/header.h"
+#include "PR/gbi.h"
+#include "tile_scroll.h"
+#include "point_lights.h"
 
 u32 unused80339F10;
 s8 filler80339F1C[20];
@@ -1280,6 +1284,17 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->controller->buttonPressed & L_TRIG) {
         gCustomDebugMode ^= 1;
     }
+    if (gCustomDebugMode) {
+        if (m->controller->buttonPressed & L_JPAD) {
+            if (gMarioState->action == ACT_DEBUG_FREE_MOVE) {
+                set_mario_action(gMarioState, ACT_IDLE, 0);
+            } else {
+                set_mario_action(gMarioState, ACT_DEBUG_FREE_MOVE, 0);
+            }
+        }
+    } else if (gMarioState->action == ACT_DEBUG_FREE_MOVE) {
+        set_mario_action(gMarioState, ACT_IDLE, 0);
+    }
     // Don't update for these buttons if squished.
     if (m->squishTimer == 0) {
         if (m->controller->buttonPressed & B_BUTTON) {
@@ -1713,11 +1728,36 @@ void func_sh_8025574C(void) {
 }
 #endif
 
+void scroll_sts_mat_castle_grounds_dl_waterOpaque_layer1() {
+	Gfx *mat = segmented_to_virtual(mat_castle_grounds_dl_waterOpaque_layer1);
+	shift_s_down(mat, 12, PACK_TILESIZE(0, 1));
+	shift_s(mat, 20, PACK_TILESIZE(0, 1));
+	shift_t(mat, 20, PACK_TILESIZE(0, 1));
+};
+
+void scroll_sts_mat_castle_grounds_dl_waterTransparent_layer5() {
+	Gfx *mat = segmented_to_virtual(mat_castle_grounds_dl_waterTransparent_layer5);
+	shift_s_down(mat, 12, PACK_TILESIZE(0, 1));
+	shift_s(mat, 20, PACK_TILESIZE(0, 1));
+	shift_t(mat, 20, PACK_TILESIZE(0, 1));
+};
+
+
 /**
  * Main function for executing Mario's behavior.
  */
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
+    
+    if ((gCurrLevelNum == LEVEL_CASTLE_GROUNDS) && (gCurrAreaIndex == 0x01) ) {
+        scroll_sts_mat_castle_grounds_dl_waterOpaque_layer1();
+        scroll_sts_mat_castle_grounds_dl_waterTransparent_layer5();
+    }
+    Vec3f pos = {gMarioState->pos[0],gMarioState->pos[1] + 600,gMarioState->pos[2]};
+    if (gCurrLevelNum == LEVEL_BOB) {
+        emit_light(pos, 255, 255, 255, 0, 0, 10);
+    }
+
 
     if (gMarioState->action) {
         gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
@@ -1729,6 +1769,20 @@ s32 execute_mario_action(UNUSED struct Object *o) {
         // If Mario is OOB, stop executing actions.
         if (gMarioState->floor == NULL) {
             return 0;
+        }
+
+        switch ((gMarioState->floor->force >> 8) & 0xFF)  {
+            case 0x06:
+            case 0x08:
+                if (g2DPosY) {
+                    gMarioState->pos[2] = g2DPosY;
+                } else {
+                    g2DPosY = gMarioState->pos[2];
+                }
+                break;
+            default:
+                g2DPosY = 0;
+                break;
         }
 
         // The function can loop through many action shifts in one frame,

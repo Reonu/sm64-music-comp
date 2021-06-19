@@ -26,6 +26,7 @@
 #define MODEL_MARIO                       0x01        // mario_geo
 #define MODEL_LUIGI                       0x02        // unused
 #define MODEL_TOAD_HEADPHONES             0xFF        // Toad with headphones
+#define MODEL_WHOMP                       0x100
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -428,7 +429,7 @@
 
 // group 14
 #define MODEL_PIRANHA_PLANT               0x64        // piranha_plant_geo
-#define MODEL_WHOMP                       0x67        // whomp_geo
+//#define MODEL_WHOMP                       0x67        // whomp_geo
 #define MODEL_KOOPA_WITH_SHELL            0x68        // koopa_with_shell_geo
 #define MODEL_METALLIC_BALL               0x65        // metallic_ball_geo
 #define MODEL_CHAIN_CHOMP                 0x66        // chain_chomp

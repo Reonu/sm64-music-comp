@@ -69,7 +69,7 @@
 // Uncomment this if you want to keep the mario head and not skip it
 //#define KEEP_MARIO_HEAD
 // Number of possible unique model ID's (keep it higher than 256)
-#define MODEL_ID_COUNT 256
+#define MODEL_ID_COUNT 512
 
 /* Coordinate overflow fix setting: 
  * Scales the world down by this factor, increasing how far you can render on
@@ -85,5 +85,8 @@
  * If you want to change the extended bounds mode, go to src/engine/extended_bounds.h
  */
 #define WORLD_SCALE 3.5f
+
+#define TEST_STAGE LEVEL_BOB
+
 
 #endif // CONFIG_H

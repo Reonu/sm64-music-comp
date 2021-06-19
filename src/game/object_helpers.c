@@ -159,7 +159,18 @@ Gfx *geo_set_toad_colors(s32 callContext, struct GraphNode *node, UNUSED void *c
     }
     return dlStart;
 }
-
+void enemy_become_2d(u8 mode, u16 distance) {
+    if (o->oDistanceToMario < distance) {
+        switch (mode) {
+            case 1:
+                o->oPosZ = gMarioState->pos[2];
+                break;
+            case 2:
+                o->oPosX = gMarioState->pos[0];
+                break;
+        }       
+    }   
+}
 /**
  * @bug Every geo function declares the 3 parameters of callContext, node, and
  * the matrix array. This one (see also geo_switch_area) doesn't. When executed,

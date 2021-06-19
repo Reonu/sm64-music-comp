@@ -47,6 +47,7 @@ extern u8 gWidescreen;
 #endif
 extern u8 gCustomCameraMode;
 extern u8 gCustomDebugMode;
+extern s32 g2DPosY;
 #ifdef EEP
 extern s8 gEepromProbe;
 #endif
