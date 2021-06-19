@@ -26,6 +26,11 @@
 
 #include "sparkle_animation/model.inc.c"
 
+#include "whomp/model.inc.c"
+#include "whomp/anims/data.inc.c"
+#include "whomp/anims/table.inc.c"
+#include "whomp/collision.inc.c"
+
 #ifdef S2DEX_TEXT_ENGINE
 #include "src/s2d_engine/config.h"
 #include FONT_C_FILE
