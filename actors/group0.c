@@ -40,3 +40,7 @@
 #include "toad_headphones/model.inc.c"
 #include "toad_headphones/anims/data.inc.c"
 #include "toad_headphones/anims/table.inc.c"
+#include "green_spring/model.inc.c"
+#include "yellow_spring/model.inc.c"
+#include "red_spring/model.inc.c"
+#include "fan_spring/model.inc.c"

@@ -27,6 +27,10 @@
 #define MODEL_LUIGI                       0x02        // unused
 #define MODEL_TOAD_HEADPHONES             0xFF        // Toad with headphones
 #define MODEL_WHOMP                       0x100
+#define MODEL_GREEN_SPRING                0x101       // Green spring
+#define MODEL_YELLOW_SPRING               0x102       // Yellow spring
+#define MODEL_RED_SPRING                  0x103
+#define MODEL_FAN_SPRING                  0x104
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 

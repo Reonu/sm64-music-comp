@@ -371,4 +371,12 @@ extern const Collision whomp_seg6_collision_06020A0C[];
 
 
 #include "toad_headphones/anim_header.h"
+#include "green_spring/geo_header.h"
+
+#include "yellow_spring/geo_header.h"
+
+#include "red_spring/geo_header.h"
+
+#include "fan_spring/geo_header.h"
+
 #endif

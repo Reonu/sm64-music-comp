@@ -268,7 +268,10 @@ void bhv_goomba_update(void) {
     // PARTIAL_UPDATE
     s32 pos2D;
     f32 animSpeed;
-    enemy_become_2d(1, 1000);
+    if (((o->oBehParams) & 0xFF) == 0x01) {
+        enemy_become_2d(1, 1000);
+    }
+    
     if (obj_update_standard_actions(o->oGoombaScale)) {
         // If this goomba has a spawner and mario moved away from the spawner,
         // unload

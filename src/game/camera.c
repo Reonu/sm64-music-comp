@@ -951,63 +951,73 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
 
     sAreaYaw = camYaw;
     calc_y_to_curr_floor(&posY, 1.f, 200.f, &focusY, 0.9f, 200.f);
-    switch ((gMarioState->floor->force >> 8) & 0xFF) {
-        case 0x01:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f);
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            break;
-        case 0x02:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(270), 0.2f); // Rotate left
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            break;
-        case 0x03:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(90), 0.2f); // Rotate right
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            break;
-        case 0x04:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(0), 0.2f); // Backtracking camera
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            break;
-        case 0x06:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //2D camera
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            pitch = DEGREES(1);
-            baseDist = 1300.0f;
-            break;
-        case 0x07:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Top-down camera
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            pitch = DEGREES(50);
-            baseDist = 2000.0f;
-            break;
-        case 0x08:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(0), 0.2f); //Inverted 2D camera
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            baseDist = 1500.0f;
-            break;
-        case 0x09:
-            s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Normal camera looking up
-            gCustomCameraMode = 1;
-            s8DirModeYawOffset = 0;
-            pitch = DEGREES(-35);
-            baseDist = (3000.0f + ((gMarioState->pos[1] - -6415)/2));
-            //print_text_fmt_int(10, 160, "%d", baseDist);
-            break;
-        case 0x0A:
-            gCustomCameraMode = 0;
-            break;
-        default:
-            pitch = look_down_slopes(camYaw);
-            baseDist = 1000.0f;
-            break;
-        }          
+    if (gMarioState->floor != NULL) {
+        switch ((gMarioState->floor->force >> 8) & 0xFF) {
+                case 0x01:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f);
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    break;
+                case 0x02:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(270), 0.2f); // Rotate left
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    break;
+                case 0x03:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(90), 0.2f); // Rotate right
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    break;
+                case 0x04:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(0), 0.2f); // Backtracking camera
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    break;
+                case 0x06:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //2D camera
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    pitch = DEGREES(1);
+                    baseDist = 1300.0f;
+                    break;
+                case 0x07:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Top-down camera
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    pitch = DEGREES(50);
+                    baseDist = 2000.0f;
+                    break;
+                case 0x08:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(0), 0.2f); //Inverted 2D camera
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    baseDist = 1500.0f;
+                    break;
+                case 0x09:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Normal camera looking up
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    pitch = DEGREES(-35);
+                    baseDist = (3000.0f + ((gMarioState->pos[1] - -6415)/2));
+                    //print_text_fmt_int(10, 160, "%d", baseDist);
+                    break;
+                case 0x0A:
+                    gCustomCameraMode = 0;
+                    break;
+                case 0x0B:
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(270), 0.2f); //Top-down camera (270º)
+                    gCustomCameraMode = 1;
+                    s8DirModeYawOffset = 0;
+                    pitch = DEGREES(50);
+                    baseDist = 2500.0f;
+                    break;
+                default:
+                    pitch = look_down_slopes(camYaw);
+                    baseDist = 1000.0f;
+                    break;
+                }      
+    }
+        
     focus_on_mario(focus, pos, posY + yOff, focusY + yOff, sLakituDist + baseDist, pitch, camYaw);
     pan_ahead_of_player(c);
     if (gCurrLevelArea == AREA_DDD_SUB) {
@@ -10910,7 +10920,7 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // BBH            | CCM
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // CASTLE_INSIDE  | HMC
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SSL            | BOB
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // JRB            | THI
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
