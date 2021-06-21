@@ -56,6 +56,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_BREAKABLE_BOX, 10006, -3659, 10724, 0, 0, 0, 0x00000000, bhvHiddenObject),
 		OBJECT(MODEL_BREAKABLE_BOX, 10006, -3422, 11063, 0, 0, 0, 0x00000000, bhvHiddenObject),
 		OBJECT(MODEL_PURPLE_SWITCH, 9145, -4603, 10542, 0, 0, 0, 0x00000000, bhvFloorSwitchHiddenObjects),
+		OBJECT(MODEL_YELLOW_SPRING, 6314, -3003, 10369, 0, 0, 0, 0x00000000, bhvGreenSpring),
 		TERRAIN(bob_area_1_collision),
 		ROOMS(bob_area_1_collision_rooms),
 		MACRO_OBJECTS(bob_area_1_macro_objs),
@@ -64,6 +65,9 @@ const LevelScript level_bob_entry[] = {
 	END_AREA(),
 
 	AREA(2, bob_area_2),
+		INSTANT_WARP(0x00, 0x01, 0, 0, 0),
+		OBJECT(MODEL_YELLOW_SPRING, 6314, -3003, 10369, 0, 0, 0, 0x00000000, bhvGreenSpring),
+		OBJECT(MODEL_YELLOW_SPRING, 5859, -2241, 10369, 0, 0, 0, 0x00000000, bhvGreenSpring),
 		TERRAIN(bob_area_2_collision),
 		MACRO_OBJECTS(bob_area_2_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
