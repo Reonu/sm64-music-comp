@@ -60,6 +60,9 @@ void bhv_coin_init(void) {
 void bhv_coin_loop(void) {
     struct Surface *sp1C;
     s16 sp1A;
+    if (((o->oBehParams) & 0xFF) == 0x01) {
+        enemy_become_2d(1, 3000);
+    }
     cur_obj_update_floor_and_walls();
     cur_obj_if_hit_wall_bounce_away();
     cur_obj_move_standard(-62);
