@@ -3,6 +3,14 @@
 const GeoLayout bob_area_2_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
+		GEO_TRANSLATE_NODE(LAYER_OPAQUE, -3136, -862, 11361),
+		GEO_OPEN_NODE(),
+			GEO_RENDER_RANGE(-2048, 5000),
+			GEO_OPEN_NODE(),
+				GEO_DISPLAY_LIST(1, bob_dl_Bullet_bill_cannon_003_mesh_layer_1),
+			GEO_CLOSE_NODE(),
+		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(4, -3170, -1848, 10337, bob_dl_Chain_mesh_layer_4),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 6695, -2622, 10338, bob_dl_room2_002_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
@@ -30,6 +38,7 @@ const GeoLayout bob_area_2[] = {
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(4, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
