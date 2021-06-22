@@ -49,3 +49,11 @@
 #include "wood_platform_intangible/model.inc.c"
 
 #include "bullet_bill/model.inc.c"
+
+#include "snowman/model.inc.c"
+#include "snowman/anims/data.inc.c"
+#include "snowman/anims/table.inc.c"
+
+#include "spindrift/model.inc.c"
+#include "spindrift/anims/data.inc.c"
+#include "spindrift/anims/table.inc.c"

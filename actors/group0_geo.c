@@ -28,3 +28,7 @@
 #include "wood_platform_intangible/geo.inc.c"
 
 #include "bullet_bill/geo.inc.c"
+
+#include "snowman/geo.inc.c"
+
+#include "spindrift/geo.inc.c"

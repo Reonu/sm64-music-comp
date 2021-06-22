@@ -34,6 +34,9 @@
 #define MODEL_WOOD_PLATFORM               0x105
 #define MODEL_WOOD_PLATFORM_INTANGIBLE    0x106
 #define MODEL_BULLET_BILL                 0x107
+#define MODEL_MR_BLIZZARD                 0x108
+#define MODEL_MR_BLIZZARD_HIDDEN          0x109
+#define MODEL_SPINDRIFT                   0x10A
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -382,9 +385,9 @@
 #define MODEL_FWOOSH                      0x57        // fwoosh_geo
 
 // group 7
-#define MODEL_SPINDRIFT                   0x54        // spindrift_geo
-#define MODEL_MR_BLIZZARD_HIDDEN          0x55        // mr_blizzard_hidden_geo
-#define MODEL_MR_BLIZZARD                 0x56        // mr_blizzard_geo
+//#define MODEL_SPINDRIFT                   0x54        // spindrift_geo
+//#define MODEL_MR_BLIZZARD_HIDDEN          0x55        // mr_blizzard_hidden_geo
+//#define MODEL_MR_BLIZZARD                 0x56        // mr_blizzard_geo
 #define MODEL_PENGUIN                     0x57        // penguin_geo
 
 // group 8
