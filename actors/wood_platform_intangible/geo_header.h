@@ -1,0 +1,10 @@
+extern const GeoLayout wood_platform_intangible_geo[];
+extern u8 wood_platform_intangible_Bark04_64x64_ci4_ci4[];
+extern u8 wood_platform_intangible_Bark04_64x64_ci4_ci4_pal_rgba16[];
+extern Vtx wood_platform_intangible_Cube_001_mesh_layer_1_vtx_cull[8];
+extern Vtx wood_platform_intangible_Cube_001_mesh_layer_1_vtx_0[64];
+extern Gfx wood_platform_intangible_Cube_001_mesh_layer_1_tri_0[];
+extern Gfx mat_wood_platform_intangible_sides[];
+extern Gfx mat_revert_wood_platform_intangible_sides[];
+extern Gfx wood_platform_intangible_Cube_001_mesh_layer_1[];
+extern Gfx wood_platform_intangible_material_revert_render_settings[];

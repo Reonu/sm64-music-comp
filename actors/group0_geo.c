@@ -24,3 +24,5 @@
 #include "yellow_spring/geo.inc.c"
 #include "red_spring/geo.inc.c"
 #include "fan_spring/geo.inc.c"
+#include "wood_platform/geo.inc.c"
+#include "wood_platform_intangible/geo.inc.c"

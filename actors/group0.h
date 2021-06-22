@@ -379,4 +379,10 @@ extern const Collision whomp_seg6_collision_06020A0C[];
 
 #include "fan_spring/geo_header.h"
 
+#include "wood_platform/geo_header.h"
+
+#include "wood_platform/collision_header.h"
+
+#include "wood_platform_intangible/geo_header.h"
+
 #endif

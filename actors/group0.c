@@ -44,3 +44,6 @@
 #include "yellow_spring/model.inc.c"
 #include "red_spring/model.inc.c"
 #include "fan_spring/model.inc.c"
+#include "wood_platform/model.inc.c"
+#include "wood_platform/collision.inc.c"
+#include "wood_platform_intangible/model.inc.c"
