@@ -6169,3 +6169,11 @@ const BehaviorScript bhvWoodPlatform[] = {
         //CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
 };
+
+const BehaviorScript bhvSnap2d[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags,(OBJ_FLAG_COMPUTE_DIST_TO_MARIO)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_snap_2d_loop),
+    END_LOOP(),
+};
