@@ -31,6 +31,8 @@
 #define MODEL_YELLOW_SPRING               0x102       // Yellow spring
 #define MODEL_RED_SPRING                  0x103
 #define MODEL_FAN_SPRING                  0x104
+#define MODEL_WOOD_PLATFORM               0x105
+#define MODEL_WOOD_PLATFORM_INTANGIBLE    0x106
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
