@@ -948,11 +948,15 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
     UNUSED f32 unused3;
     f32 yOff = 125.f;
     f32 baseDist = 1000.f;
-
     sAreaYaw = camYaw;
     calc_y_to_curr_floor(&posY, 1.f, 200.f, &focusY, 0.9f, 200.f);
     if (gMarioState->floor != NULL) {
-        switch ((gMarioState->floor->force >> 8) & 0xFF) {
+        if (gMarioState->floor->type != SURFACE_NO_CAM_COLLISION) {
+            gMarioState->force2 = gMarioState->floor->force;
+        }
+    }
+    if (gMarioState->floor != NULL) {
+        switch ((gMarioState->force2 >> 8) & 0xFF) {
                 case 0x01:
                     s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f);
                     gCustomCameraMode = 1;
