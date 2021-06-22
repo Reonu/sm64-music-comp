@@ -160,13 +160,27 @@ Gfx *geo_set_toad_colors(s32 callContext, struct GraphNode *node, UNUSED void *c
     return dlStart;
 }
 void enemy_become_2d(u8 mode, u16 distance) {
+    f32 z = gMarioState->pos[2] - o->oPosZ;
+    f32 x = gMarioState->pos[1] - o->oPosX;
     if (o->oDistanceToMario < distance) {
         switch (mode) {
             case 1:
-                o->oPosZ = gMarioState->pos[2];
+                if (z < -20) {
+                    z = -20;
+                }
+                if (z > 20) {
+                    z = 20;
+                }
+                o->oPosZ += z;
                 break;
             case 2:
-                o->oPosX = gMarioState->pos[0];
+                if (x < -20) {
+                    x = -20;
+                }
+                if (x > 20) {
+                    x = 20;
+                }
+                o->oPosX += x;
                 break;
         }       
     }   
