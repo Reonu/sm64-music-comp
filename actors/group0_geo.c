@@ -26,3 +26,5 @@
 #include "fan_spring/geo.inc.c"
 #include "wood_platform/geo.inc.c"
 #include "wood_platform_intangible/geo.inc.c"
+
+#include "bullet_bill/geo.inc.c"

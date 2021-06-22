@@ -123,6 +123,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_FAN_SPRING,               fan_spring_geo),
     LOAD_MODEL_FROM_GEO(MODEL_WOOD_PLATFORM,            wood_platform_geo),
     LOAD_MODEL_FROM_GEO(MODEL_WOOD_PLATFORM_INTANGIBLE, wood_platform_intangible_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_BULLET_BILL,              bullet_bill_geo),
     FREE_LEVEL_POOL(),
     CALL(/*arg*/ 0, /*func*/ lvl_init_from_save_file),
     LOOP_BEGIN(),

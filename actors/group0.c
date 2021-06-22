@@ -47,3 +47,5 @@
 #include "wood_platform/model.inc.c"
 #include "wood_platform/collision.inc.c"
 #include "wood_platform_intangible/model.inc.c"
+
+#include "bullet_bill/model.inc.c"
