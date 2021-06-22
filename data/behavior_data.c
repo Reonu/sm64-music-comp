@@ -3554,9 +3554,12 @@ const BehaviorScript bhvUnlockDoorStar[] = {
 };
 
 const BehaviorScript bhvInstantActiveWarp[] = {
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_warp_stalker_loop),
+    END_LOOP(),
     BREAK(),
 };
-
 const BehaviorScript bhvAirborneWarp[] = {
     BREAK(),
 };
@@ -6155,5 +6158,14 @@ const BehaviorScript bhvGreenSpring[] = {
     END_LOOP(),
 };
 
-
-
+const BehaviorScript bhvWoodPlatform[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_COLLISION_DATA(wood_platform_collision),
+    SET_FLOAT(oCollisionDistance, 2000),
+    SET_FLOAT(oDrawingDistance, 10000),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_wood_platform_loop),
+        //CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
