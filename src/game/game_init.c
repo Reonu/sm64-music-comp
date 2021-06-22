@@ -71,6 +71,7 @@ u8 gWidescreen;
 u8 gCustomCameraMode;
 u8 gCustomDebugMode;
 s32 g2DPosY;
+u8 gCustom2D;
 
 u16 sCurrFBNum = 0;
 u16 frameBufferIndex = 0;
