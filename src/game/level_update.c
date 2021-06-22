@@ -756,18 +756,12 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 break;
 
             case WARP_OP_WARP_FLOOR:
-                sSourceWarpNodeId = WARP_NODE_WARP_FLOOR;
-                if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
                     if (m->floor->type != SURFACE_DEATH_PLANE) {
-                        sSourceWarpNodeId = m->floor->force;
+                        sSourceWarpNodeId = ((gMarioState->floor->force >> 8) & 0xFF);
                     }
                     else {
-                        sSourceWarpNodeId = WARP_NODE_WARP_FLOOR;
-                        if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
-                            sSourceWarpNodeId = WARP_NODE_DEATH;
-                        }
+                        sSourceWarpNodeId = WARP_NODE_DEATH;
                     }
-                }
 
                 sDelayedWarpTimer = 20;
                 play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x14, 0x00, 0x00, 0x00);
