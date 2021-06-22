@@ -1,5 +1,21 @@
 // warp.c.inc
 
+// `o` is defined here when compiling, so this will just allow autocomplete to work here and make it easier to see errors
+#ifndef o
+
+#include "types.h"
+#include "sm64.h"
+#include "game/mario.h"
+#include "game/level_update.h"
+#include "game/area.h"
+#include "game/object_list_processor.h"
+#include "game/object_helpers.h"
+#include "object_fields.h"
+#include "surface_terrains.h"
+
+#define o gCurrentObject
+#endif
+
 void bhv_warp_loop(void) {
     u16 sp6;
     if (o->oTimer == 0) {
@@ -32,16 +48,15 @@ void bhv_fading_warp_loop() // identical to the above function except for o->hit
 }
 
 void bhv_warp_stalker_loop() {
-    if (((o->oBehParams) & 0xFF) != 0) {
-        if (gMarioState->floor != NULL) {
-                if ((gMarioState->floor->force & 0xFF) == 0x0A) {
-                    if((gMarioState->action & ACT_GROUP_MASK) == ACT_GROUP_MOVING) {
-                        o->oPosX = (gMarioState->floor->vertex1[0] + gMarioState->floor->vertex2[0] + gMarioState->floor->vertex3[0]) / 3;
-                        o->oPosY = ((gMarioState->floor->vertex1[1] + gMarioState->floor->vertex2[1] + gMarioState->floor->vertex3[1]) / 3) + 50;
-                        o->oPosZ = (gMarioState->floor->vertex1[2] + gMarioState->floor->vertex2[2] + gMarioState->floor->vertex3[2]) / 3;
-                        o->oFaceAngleYaw = gMarioState->faceAngle[1];
-                    }
-                }
-        }
+    if (
+        o->oBehParams & 0xFF != 0 &&
+        gMarioState->floor &&
+        (gMarioState->floor->force & 0xFF) == 0x0A &&
+        (gMarioState->action & ACT_GROUP_MASK) == ACT_GROUP_MOVING
+    ) {
+        o->oPosX = (gMarioState->floor->vertex1[0] + gMarioState->floor->vertex2[0] + gMarioState->floor->vertex3[0]) / 3;
+        o->oPosY = ((gMarioState->floor->vertex1[1] + gMarioState->floor->vertex2[1] + gMarioState->floor->vertex3[1]) / 3) + 50;
+        o->oPosZ = (gMarioState->floor->vertex1[2] + gMarioState->floor->vertex2[2] + gMarioState->floor->vertex3[2]) / 3;
+        o->oFaceAngleYaw = gMarioState->faceAngle[1];
     }
 }
