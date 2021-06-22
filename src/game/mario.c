@@ -1755,7 +1755,7 @@ s32 execute_mario_action(UNUSED struct Object *o) {
     }
     Vec3f pos = {gMarioState->pos[0],gMarioState->pos[1] + 600,gMarioState->pos[2]};
     if (gCurrLevelNum == LEVEL_BOB) {
-        //emit_light(pos, 255, 255, 255, 0, 0, 10);
+        emit_light(pos, 255, 255, 255, 0, 0, 10);
     }
 
 
@@ -1771,12 +1771,23 @@ s32 execute_mario_action(UNUSED struct Object *o) {
             return 0;
         }
 
-        switch ((gMarioState->floor->force >> 8) & 0xFF)  {
+        switch ((gMarioState->force2 >> 8) & 0xFF)  {
             case 0x06:
             case 0x08:
                 if (g2DPosY) {
-                    gMarioState->pos[2] = g2DPosY;
-                } else {
+                    if (!gCustom2D) {
+                        gMarioState->pos[2] = g2DPosY;
+                    } else {
+                        f32 d = g2DPosY - gMarioState->pos[2];
+                        if (d < -60) {
+                            d = -60;
+                        }
+                        if (d > 60) {
+                            d = 60;
+                        }
+                        gMarioState->pos[2] += d;
+                    }
+                } else if (!gCustom2D) {
                     g2DPosY = gMarioState->pos[2];
                 }
                 break;
