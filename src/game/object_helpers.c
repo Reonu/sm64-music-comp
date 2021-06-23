@@ -159,6 +159,32 @@ Gfx *geo_set_toad_colors(s32 callContext, struct GraphNode *node, UNUSED void *c
     }
     return dlStart;
 }
+
+Gfx *geo_update_fog(s32 callContext, struct GraphNode *node, UNUSED void *context) {
+    Gfx *dlStart, *dlHead;
+    struct GraphNodeGenerated *currentGraphNode;
+
+    dlStart = NULL;
+
+    if (callContext == GEO_CONTEXT_RENDER) {
+        currentGraphNode = (struct GraphNodeGenerated *) node;
+
+        if (currentGraphNode->parameter != 0) {
+            currentGraphNode->fnNode.node.flags =
+                (currentGraphNode->parameter << 8) | (currentGraphNode->fnNode.node.flags & 0xFF);
+        }
+
+        dlStart = alloc_display_list(sizeof(Gfx) * 3);
+
+        dlHead = dlStart;
+        gDPSetFogColor(dlHead++, gGlobalFog.r, gGlobalFog.g, gGlobalFog.b, gGlobalFog.a);
+        gSPFogPosition(dlHead++, gGlobalFog.low, gGlobalFog.high);
+        gSPEndDisplayList(dlHead);
+    }
+
+    return dlStart;
+}
+
 void enemy_become_2d(u8 mode, u16 distance) {
     f32 z = gMarioState->pos[2] - o->oPosZ;
     f32 x = gMarioState->pos[1] - o->oPosX;

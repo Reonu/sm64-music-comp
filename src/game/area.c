@@ -52,6 +52,8 @@ u8 gWarpTransBlue = 0;
 s16 gCurrSaveFileNum = 1;
 s16 gCurrLevelNum = LEVEL_MIN;
 
+struct GlobalFog gGlobalFog = { 147, 147, 170, 0xFF, 965, 1014 };
+
 /*
  * The following two tables are used in get_mario_spawn_type() to determine spawn type
  * from warp behavior.
@@ -360,8 +362,35 @@ void play_transition_after_delay(s16 transType, s16 time, u8 red, u8 green, u8 b
     play_transition(transType, time, red, green, blue);
 }
 
+#define DEBUG_FOG
+#ifdef DEBUG_FOG
+void debug_test_fog(void) {
+    if (gPlayer1Controller->buttonDown & D_JPAD) gGlobalFog.low--;
+    if (gPlayer1Controller->buttonDown & U_JPAD) gGlobalFog.low++;
+    if (gPlayer1Controller->buttonDown & L_JPAD) gGlobalFog.high--;
+    if (gPlayer1Controller->buttonDown & R_JPAD) gGlobalFog.high++;
+    if (gPlayer1Controller->buttonDown & L_TRIG && gPlayer1Controller->buttonDown & A_BUTTON) {
+        gGlobalFog.r++;
+        gGlobalFog.g++;
+        gGlobalFog.b++;
+    };
+    if (gPlayer1Controller->buttonDown & L_TRIG && gPlayer1Controller->buttonDown & B_BUTTON) {
+        gGlobalFog.r--;
+        gGlobalFog.g--;
+        gGlobalFog.b--;
+    };
+    print_text_fmt_int(20, 80, "LOW   %d", gGlobalFog.low);
+    print_text_fmt_int(20, 50, "HIGH  %d", gGlobalFog.high);
+    print_text_fmt_int(20, 20, "VALUE %d", gGlobalFog.r);
+}
+#endif
+
 void render_game(void) {
     if (gCurrentArea != NULL && !gWarpTransition.pauseRendering) {
+#ifdef DEBUG_FOG
+    debug_test_fog();
+#endif
+
         geo_process_root(gCurrentArea->unk04, D_8032CE74, D_8032CE78, gFBSetColor);
 
         gSPViewport(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&D_8032CF00));

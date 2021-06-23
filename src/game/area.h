@@ -22,6 +22,16 @@ struct ObjectWarpNode
     /*0x08*/ struct ObjectWarpNode *next;
 };
 
+struct GlobalFog
+{
+    /*0x00*/ u8 r;
+    /*0x01*/ u8 g;
+    /*0x02*/ u8 b;
+    /*0x03*/ u8 a;
+    /*0x04*/ s16 low;
+    /*0x04*/ s16 high;
+};
+
 // From Surface 0x1B to 0x1E
 #define INSTANT_WARP_INDEX_START  0x00 // Equal and greater than Surface 0x1B
 #define INSTANT_WARP_INDEX_STOP   0x04 // Less than Surface 0x1F
@@ -137,6 +147,8 @@ extern struct Area *gCurrentArea;
 
 extern s16 gCurrSaveFileNum;
 extern s16 gCurrLevelNum;
+
+extern struct GlobalFog gGlobalFog;
 
 
 void override_viewport_and_clip(Vp *a, Vp *b, u8 c, u8 d, u8 e);
