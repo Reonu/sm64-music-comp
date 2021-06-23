@@ -52,8 +52,8 @@ static const Vtx breakable_box_seg8_vertex_08012B80[] = {
 
 // 0x08012C30 - 0x08012CD8
 const Gfx breakable_box_seg8_dl_08012C30[] = {
-    gsSPLight(&breakable_box_seg8_lights_08011A80.l, 1),
-    gsSPLight(&breakable_box_seg8_lights_08011A80.a, 2),
+    //gsSPLight(&breakable_box_seg8_lights_08011A80.l, 1),
+    //gsSPLight(&breakable_box_seg8_lights_08011A80.a, 2),
     gsSPVertex(breakable_box_seg8_vertex_08012A90, 15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 3,  5,  6, 0x0,  7,  8,  9, 0x0),
