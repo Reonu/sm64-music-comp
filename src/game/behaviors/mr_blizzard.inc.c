@@ -194,7 +194,7 @@ static void mr_blizzard_act_rotate(void) {
             o->oMrBlizzardChangeInDizziness = 300.0f;
             o->prevObj = o->oMrBlizzardHeldObj = NULL;
             // After 60 frames, if Mario is within 11.25 degrees of Mr. Blizzard, throw snowball action.
-        } else if (o->oTimer > 60 && abs_angle_diff(o->oAngleToMario, o->oMoveAngleYaw) < 0x800) {
+        } else if (o->oTimer > 15 && abs_angle_diff(o->oAngleToMario, o->oMoveAngleYaw) < 0x800) {
             o->oAction = MR_BLIZZARD_ACT_THROW_SNOWBALL;
         }
     }
