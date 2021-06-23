@@ -998,11 +998,11 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
                     baseDist = 1500.0f;
                     break;
                 case 0x09:
-                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(180), 0.2f); //Normal camera looking up
+                    s8DirModeBaseYaw = approach_yaw(gLakituState.yaw, DEGREES(90), 0.2f); //Normal camera looking up
                     gCustomCameraMode = 1;
                     s8DirModeYawOffset = 0;
-                    pitch = DEGREES(-35);
-                    baseDist = (3000.0f + ((gMarioState->pos[1] - -6415)/2));
+                    pitch = DEGREES(-55);
+                    baseDist = (3000.0f + ((gMarioState->pos[1] - -1750)/2));
                     //print_text_fmt_int(10, 160, "%d", baseDist);
                     break;
                 case 0x0A:
