@@ -57,3 +57,7 @@
 #include "spindrift/model.inc.c"
 #include "spindrift/anims/data.inc.c"
 #include "spindrift/anims/table.inc.c"
+
+#include "thwomp/model.inc.c"
+#include "thwomp/collision.inc.c"
+#include "snow_boulder/model.inc.c"

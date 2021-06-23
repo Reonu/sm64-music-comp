@@ -407,6 +407,14 @@ extern const Gfx spindrift_seg5_dl_05002C98[];
 extern const Gfx spindrift_seg5_dl_05002D08[];
 extern const struct Animation *const spindrift_seg5_anims_05002D68[];
 
+// thwomp
+extern const GeoLayout thwomp_geo[];
+extern const Gfx thwomp_seg5_dl_0500B570[];
+extern const Gfx thwomp_seg5_dl_0500B718[];
+extern const Gfx thwomp_seg5_dl_0500B750[];
+extern const Collision thwomp_seg5_collision_0500B7D0[];
+extern const Collision thwomp_seg5_collision_0500B92C[];
+
 #include "mario/geo_header.h"
 
 #include "lantern/geo_header.h"
@@ -428,5 +436,7 @@ extern const struct Animation *const spindrift_seg5_anims_05002D68[];
 #include "wood_platform/collision_header.h"
 
 #include "wood_platform_intangible/geo_header.h"
+
+#include "snow_boulder/geo_header.h"
 
 #endif

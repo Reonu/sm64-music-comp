@@ -32,3 +32,6 @@
 #include "snowman/geo.inc.c"
 
 #include "spindrift/geo.inc.c"
+
+#include "thwomp/geo.inc.c"
+#include "snow_boulder/geo.inc.c"
