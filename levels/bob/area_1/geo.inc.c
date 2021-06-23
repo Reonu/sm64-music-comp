@@ -29,7 +29,6 @@ const GeoLayout bob_dl_room1_geo[] = {
 			GEO_TRANSLATE_NODE_WITH_DL(1, 1186, -11660, -692, bob_dl_mainRoom_mesh_layer_1),
 			GEO_OPEN_NODE(),
 				GEO_DISPLAY_LIST(5, bob_dl_mainRoom_mesh_layer_5),
-				GEO_DISPLAY_LIST(6, bob_dl_mainRoom_mesh_layer_6),
 			GEO_CLOSE_NODE(),
 			GEO_TRANSLATE_NODE_WITH_DL(1, 8145, -11907, -3490, bob_dl_Rocks_mesh_layer_1),
 			GEO_TRANSLATE_NODE_WITH_DL(1, 10078, -11310, -3490, bob_dl_Rocks_001_mesh_layer_1),
@@ -82,9 +81,8 @@ const GeoLayout bob_area_1[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(6, bob_dl_material_revert_render_settings),
-		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
