@@ -48,6 +48,7 @@ const LevelScript level_bob_entry[] = {
 		INSTANT_WARP(0x02, 0x03, 0, 3500, 0),
 		INSTANT_WARP(0x03, 0x03, -11500, 9200, 250),
 		INSTANT_WARP(0x04, 0x01, -8000, 4500, 0),
+		INSTANT_WARP(0x05, 0x04, 0, 0, 0),
 		OBJECT(MODEL_GOOMBA, 6524, -7425, 18191, 0, 0, 0, 0x00000001, bhvGoomba),
 		MARIO_POS(0x01, 0, -591, -7725, 23375),
 		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x01000000, bhvBirdsSoundLoop),
@@ -132,6 +133,13 @@ const LevelScript level_bob_entry[] = {
 		MACRO_OBJECTS(bob_area_3_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
 		TERRAIN_TYPE(TERRAIN_SNOW),
+	END_AREA(),
+
+	AREA(4, bob_area_4),
+		TERRAIN(bob_area_4_collision),
+		MACRO_OBJECTS(bob_area_4_macro_objs),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		TERRAIN_TYPE(TERRAIN_GRASS),
 	END_AREA(),
 
 	FREE_LEVEL_POOL(),
