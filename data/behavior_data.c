@@ -6164,6 +6164,7 @@ const BehaviorScript bhvWoodPlatform[] = {
     LOAD_COLLISION_DATA(wood_platform_collision),
     SET_FLOAT(oCollisionDistance, 2000),
     SET_FLOAT(oDrawingDistance, 10000),
+    CALL_NATIVE(bhv_wood_platform_init),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_wood_platform_loop),
         //CALL_NATIVE(load_object_collision_model),

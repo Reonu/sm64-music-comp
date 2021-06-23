@@ -596,7 +596,12 @@ Gfx wood_platform_Cube_mesh_layer_1_tri_1[] = {
 
 Gfx mat_wood_platform_sides[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(
+		TEXEL0, 0, SHADE, ENVIRONMENT,
+		0, 0, 0, ENVIRONMENT,
+		TEXEL0, 0, SHADE, ENVIRONMENT,
+		0, 0, 0, ENVIRONMENT
+	),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, wood_platform_Bark04_64x64_ci4_ci4_pal_rgba16),
@@ -624,7 +629,12 @@ Gfx mat_revert_wood_platform_sides[] = {
 
 Gfx mat_wood_platform_top[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(
+		TEXEL0, 0, SHADE, ENVIRONMENT,
+		0, 0, 0, ENVIRONMENT,
+		TEXEL0, 0, SHADE, ENVIRONMENT,
+		0, 0, 0, ENVIRONMENT
+	),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, wood_platform_SlopeWood2_64x64_mirrored_ci4_ci4_pal_rgba16),

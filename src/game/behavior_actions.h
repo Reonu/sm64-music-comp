@@ -554,6 +554,7 @@ void bhv_volcano_trap_loop(void);
 void bhv_green_spring_init(void);
 void bhv_green_spring_loop(void);
 void bhv_wood_platform_loop(void);
+void bhv_wood_platform_init(void);
 void bhv_warp_stalker_loop(void);
 void bhv_snap_2d_loop(void);
 

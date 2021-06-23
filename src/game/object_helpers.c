@@ -160,6 +160,35 @@ Gfx *geo_set_toad_colors(s32 callContext, struct GraphNode *node, UNUSED void *c
     return dlStart;
 }
 
+Gfx *geo_set_env_color(s32 callContext, struct GraphNode *node, UNUSED void *context) {
+    Gfx *dlStart, *dlHead;
+    struct Object *objectGraphNode;
+    struct GraphNodeGenerated *currentGraphNode;
+    u8 layer;
+    dlStart = NULL;
+
+    if (callContext == GEO_CONTEXT_RENDER) {
+        currentGraphNode = (struct GraphNodeGenerated *) node;
+        objectGraphNode = (struct Object *) gCurGraphNodeObject;
+        layer = currentGraphNode->parameter & 0xFF;
+
+        if (layer != 0) {
+            currentGraphNode->fnNode.node.flags =
+                (layer << 8) | (currentGraphNode->fnNode.node.flags & 0xFF);
+        }
+    
+        dlStart = alloc_display_list(sizeof(Gfx) * 2);
+        dlHead = dlStart;
+
+        u8 r = (objectGraphNode->oEnvRGB >> 16) & 0xff;
+        u8 g = (objectGraphNode->oEnvRGB >> 8) & 0xff;
+        u8 b = objectGraphNode->oEnvRGB & 0xff;
+        gDPSetEnvColor(dlHead++, r, g, b, 255);
+        gSPEndDisplayList(dlHead);
+    }
+    return dlStart;
+}
+
 Gfx *geo_update_fog(s32 callContext, struct GraphNode *node, UNUSED void *context) {
     Gfx *dlStart, *dlHead;
     struct GraphNodeGenerated *currentGraphNode;
