@@ -15,7 +15,7 @@ void bhv_wood_platform_loop(void) {
                 cur_obj_set_model(MODEL_WOOD_PLATFORM_INTANGIBLE);
             }
             load_object_collision_model();
-            emit_light(pos, (o->oTimer*2), 0, 0, 0, 0, 45);
+            //emit_light(pos, (o->oTimer*2), 0, 0, 0, 0, 45);
             break;
         case 2:
             if (o->oTimer > 125) {
