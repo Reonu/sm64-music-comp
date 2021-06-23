@@ -3,13 +3,13 @@
 const GeoLayout bob_area_3_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ASM(1, geo_update_fog),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -5379, -3265, 9378, bob_dl_Cone_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -2709, -3154, 8070, bob_dl_mainRoom_001_mesh_layer_1),
-		GEO_ASM(6, geo_update_fog),
+		GEO_TRANSLATE_NODE(LAYER_OPAQUE, -2709, -3154, 8070),
 		GEO_OPEN_NODE(),
-			GEO_DISPLAY_LIST(6, bob_dl_mainRoom_001_mesh_layer_6),
+			GEO_ASM(0, geo_update_fog),
+			GEO_DISPLAY_LIST(1, bob_dl_A_mainRoom_001_mesh_layer_1),
+			GEO_DISPLAY_LIST(6, bob_dl_A_mainRoom_001_mesh_layer_6),
 		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -5379, -3265, 9378, bob_dl_Z_Background_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
