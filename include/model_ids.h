@@ -37,6 +37,8 @@
 #define MODEL_MR_BLIZZARD                 0x108
 #define MODEL_MR_BLIZZARD_HIDDEN          0x109
 #define MODEL_SPINDRIFT                   0x10A
+#define MODEL_THWOMP                      0x10B
+#define MODEL_SNOW_BOULDER                0x10C
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -350,7 +352,7 @@
 #define MODEL_YELLOW_SPHERE               0x55        // yellow_sphere_geo
 #define MODEL_HOOT                        0x56        // hoot_geo
 #define MODEL_YOSHI_EGG                   0x57        // yoshi_egg_geo
-#define MODEL_THWOMP                      0x58        // thwomp_geo
+//#define MODEL_THWOMP                      0x58        // thwomp_geo
 #define MODEL_HEAVE_HO                    0x59        // heave_ho_geo
 
 // group 2

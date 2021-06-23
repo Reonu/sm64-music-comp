@@ -127,6 +127,8 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_MR_BLIZZARD,              mr_blizzard_geo),
     LOAD_MODEL_FROM_GEO(MODEL_MR_BLIZZARD_HIDDEN,       mr_blizzard_hidden_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SPINDRIFT,                spindrift_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_THWOMP,                   thwomp_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_SNOW_BOULDER,             snow_boulder_geo),
     FREE_LEVEL_POOL(),
     CALL(/*arg*/ 0, /*func*/ lvl_init_from_save_file),
     LOOP_BEGIN(),
