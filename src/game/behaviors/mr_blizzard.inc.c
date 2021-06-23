@@ -92,7 +92,7 @@ static void mr_blizzard_act_spawn_snowball(void) {
 
 static void mr_blizzard_act_hide_unhide(void) {
 
-    if (o->oDistanceToMario < 1000.0f) {
+    if (o->oDistanceToMario < 2000.0f) {
         // If Mario is in range, move to rising action, make Mr. Blizzard visible,
         // make Mr. Blizzard tangible, and initialize GraphYVel.
         cur_obj_play_sound_2(SOUND_OBJ_SNOW_SAND2);
@@ -100,7 +100,7 @@ static void mr_blizzard_act_hide_unhide(void) {
         o->oMoveAngleYaw = o->oAngleToMario;
         o->oMrBlizzardGraphYVel = 42.0f;
 
-        mr_blizzard_spawn_white_particles(8, -10, 15, 20, 10);
+        //mr_blizzard_spawn_white_particles(8, -10, 15, 20, 10);
         cur_obj_unhide();
         cur_obj_become_tangible();
     } else {
@@ -127,7 +127,7 @@ static void mr_blizzard_act_rise_from_ground(void) {
         o->oPosY += o->oMrBlizzardGraphYOffset - 24.0f;
         o->oMrBlizzardGraphYOffset = 24.0f;
 
-        mr_blizzard_spawn_white_particles(8, -20, 20, 15, 10);
+        //mr_blizzard_spawn_white_particles(8, -20, 20, 15, 10);
 
         o->oAction = MR_BLIZZARD_ACT_ROTATE;
         o->oVelY = o->oMrBlizzardGraphYVel;
