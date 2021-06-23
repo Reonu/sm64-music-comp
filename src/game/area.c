@@ -362,7 +362,6 @@ void play_transition_after_delay(s16 transType, s16 time, u8 red, u8 green, u8 b
     play_transition(transType, time, red, green, blue);
 }
 
-#define DEBUG_FOG
 #ifdef DEBUG_FOG
 void debug_test_fog(void) {
     if (gPlayer1Controller->buttonDown & D_JPAD) gGlobalFog.low--;
