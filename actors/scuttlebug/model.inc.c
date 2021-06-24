@@ -76,8 +76,8 @@ const Gfx scuttlebug_seg6_dl_060139C0[] = {
 // 0x060139F8 - 0x06013A70
 const Gfx scuttlebug_seg6_dl_060139F8[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -88,7 +88,7 @@ const Gfx scuttlebug_seg6_dl_060139F8[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING),
+    //gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList(),
 };
 
@@ -113,8 +113,8 @@ const Gfx scuttlebug_seg6_dl_06013AB0[] = {
 // 0x06013AE8 - 0x06013B58
 const Gfx scuttlebug_seg6_dl_06013AE8[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -124,7 +124,7 @@ const Gfx scuttlebug_seg6_dl_06013AE8[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING),
+    //gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList(),
 };
 
@@ -149,8 +149,8 @@ const Gfx scuttlebug_seg6_dl_06013B98[] = {
 // 0x06013BD0 - 0x06013C40
 const Gfx scuttlebug_seg6_dl_06013BD0[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -160,7 +160,7 @@ const Gfx scuttlebug_seg6_dl_06013BD0[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING),
+    //gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList(),
 };
 
@@ -185,8 +185,8 @@ const Gfx scuttlebug_seg6_dl_06013C80[] = {
 // 0x06013CB8 - 0x06013D28
 const Gfx scuttlebug_seg6_dl_06013CB8[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -196,7 +196,7 @@ const Gfx scuttlebug_seg6_dl_06013CB8[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING),
+    //gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList(),
 };
 
@@ -221,8 +221,8 @@ const Gfx scuttlebug_seg6_dl_06013D68[] = {
 // 0x06013DA0 - 0x06013E10
 const Gfx scuttlebug_seg6_dl_06013DA0[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -232,7 +232,7 @@ const Gfx scuttlebug_seg6_dl_06013DA0[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING),
+    //gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList(),
 };
 
@@ -278,8 +278,8 @@ static const Vtx scuttlebug_seg6_vertex_06013F28[] = {
 
 // 0x06013FC8 - 0x060140F0
 const Gfx scuttlebug_seg6_dl_06013FC8[] = {
-    gsSPLight(&scuttlebug_seg6_lights_06013E10.l, 1),
-    gsSPLight(&scuttlebug_seg6_lights_06013E10.a, 2),
+    //gsSPLight(&scuttlebug_seg6_lights_06013E10.l, 1),
+    //gsSPLight(&scuttlebug_seg6_lights_06013E10.a, 2),
     gsSPVertex(scuttlebug_seg6_vertex_06013E28, 16, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 5,  6,  7, 0x0,  5,  4,  6, 0x0),
@@ -330,8 +330,8 @@ const Gfx scuttlebug_seg6_dl_06014150[] = {
 // 0x06014188 - 0x060141F8
 const Gfx scuttlebug_seg6_dl_06014188[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING | G_CULL_BACK),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING | G_CULL_BACK),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -341,7 +341,7 @@ const Gfx scuttlebug_seg6_dl_06014188[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING | G_CULL_BACK),
+    //gsSPSetGeometryMode(G_LIGHTING | G_CULL_BACK),
     gsSPEndDisplayList(),
 };
 
@@ -366,8 +366,8 @@ const Gfx scuttlebug_seg6_dl_06014238[] = {
 // 0x06014270 - 0x060142E0
 const Gfx scuttlebug_seg6_dl_06014270[] = {
     gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
-    gsSPClearGeometryMode(G_LIGHTING | G_CULL_BACK),
+    gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
+    //gsSPClearGeometryMode(G_LIGHTING | G_CULL_BACK),
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPTileSync(),
@@ -377,7 +377,7 @@ const Gfx scuttlebug_seg6_dl_06014270[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_LIGHTING | G_CULL_BACK),
+    //gsSPSetGeometryMode(G_LIGHTING | G_CULL_BACK),
     gsSPEndDisplayList(),
 };
 
@@ -397,8 +397,8 @@ static const Vtx scuttlebug_seg6_vertex_060142F8[] = {
 
 // 0x06014338 - 0x06014378
 const Gfx scuttlebug_seg6_dl_06014338[] = {
-    gsSPLight(&scuttlebug_seg6_lights_060142E0.l, 1),
-    gsSPLight(&scuttlebug_seg6_lights_060142E0.a, 2),
+    //gsSPLight(&scuttlebug_seg6_lights_060142E0.l, 1),
+    //gsSPLight(&scuttlebug_seg6_lights_060142E0.a, 2),
     gsSPVertex(scuttlebug_seg6_vertex_060142F8, 4, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  2,  1, 0x0),
     gsSP2Triangles( 2,  3,  0, 0x0,  1,  0,  3, 0x0),
