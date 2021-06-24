@@ -1,5 +1,5 @@
 // flamethrower.c.inc
-
+#include "point_lights.h"
 void bhv_flamethrower_flame_loop(void) {
     f32 size;
     s32 sp18;
@@ -39,12 +39,14 @@ void bhv_flamethrower_loop(void) {
     s32 sp34;
     s32 model;
     UNUSED u8 pad[8];
+    Vec3f pos = {o->oPosX, o->oPosY + 500, o->oPosZ};
     if (o->oAction == 0) {
         if (gCurrLevelNum != LEVEL_BBH || gMarioOnMerryGoRound == TRUE)
             if (o->oDistanceToMario < 2000.0f)
                 o->oAction++;
     } else if (o->oAction == 1) {
         model = MODEL_RED_FLAME;
+        emit_light(pos, 255, 0, 0, 0, 0, 30);
         flameVel = 95.0f;
         if (o->oBehParams2ndByte == 1)
             model = MODEL_BLUE_FLAME;
