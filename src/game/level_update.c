@@ -331,6 +331,7 @@ void set_mario_initial_action(struct MarioState *m, u32 spawnType, u32 actionArg
             break;
         case MARIO_SPAWN_INSTANT_ACTIVE:
             set_mario_action(m, ACT_IDLE, 0);
+            gMarioState->health = 0x800;
             break;
         case MARIO_SPAWN_AIRBORNE:
             set_mario_action(m, ACT_SPAWN_NO_SPIN_AIRBORNE, 0);
