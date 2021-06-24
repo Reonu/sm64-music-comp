@@ -39,6 +39,7 @@
 #define MODEL_SPINDRIFT                   0x10A
 #define MODEL_THWOMP                      0x10B
 #define MODEL_SNOW_BOULDER                0x10C
+#define MODEL_SCUTTLEBUG                  0x10D
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -460,7 +461,7 @@
 
 // group 17
 #define MODEL_SWOOP                       0x64        // swoop_geo
-#define MODEL_SCUTTLEBUG                  0x65        // scuttlebug_geo
+//#define MODEL_SCUTTLEBUG                  0x65        // scuttlebug_geo
 #define MODEL_MR_I_IRIS                   0x66        // mr_i_iris_geo
 #define MODEL_MR_I                        0x67        // mr_i_geo
 #define MODEL_DORRIE                      0x68        // dorrie_geo

@@ -35,3 +35,5 @@
 
 #include "thwomp/geo.inc.c"
 #include "snow_boulder/geo.inc.c"
+
+#include "scuttlebug/geo.inc.c"

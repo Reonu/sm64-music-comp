@@ -61,3 +61,7 @@
 #include "thwomp/model.inc.c"
 #include "thwomp/collision.inc.c"
 #include "snow_boulder/model.inc.c"
+
+#include "scuttlebug/model.inc.c"
+#include "scuttlebug/anims/data.inc.c"
+#include "scuttlebug/anims/table.inc.c"

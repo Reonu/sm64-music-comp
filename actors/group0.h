@@ -415,6 +415,29 @@ extern const Gfx thwomp_seg5_dl_0500B750[];
 extern const Collision thwomp_seg5_collision_0500B7D0[];
 extern const Collision thwomp_seg5_collision_0500B92C[];
 
+// scuttlebug
+extern const GeoLayout scuttlebug_geo[];
+extern const Gfx scuttlebug_seg6_dl_06013988[];
+extern const Gfx scuttlebug_seg6_dl_060139C0[];
+extern const Gfx scuttlebug_seg6_dl_060139F8[];
+extern const Gfx scuttlebug_seg6_dl_06013AB0[];
+extern const Gfx scuttlebug_seg6_dl_06013AE8[];
+extern const Gfx scuttlebug_seg6_dl_06013B98[];
+extern const Gfx scuttlebug_seg6_dl_06013BD0[];
+extern const Gfx scuttlebug_seg6_dl_06013C80[];
+extern const Gfx scuttlebug_seg6_dl_06013CB8[];
+extern const Gfx scuttlebug_seg6_dl_06013D68[];
+extern const Gfx scuttlebug_seg6_dl_06013DA0[];
+extern const Gfx scuttlebug_seg6_dl_06013FC8[];
+extern const Gfx scuttlebug_seg6_dl_060140F0[];
+extern const Gfx scuttlebug_seg6_dl_06014150[];
+extern const Gfx scuttlebug_seg6_dl_06014188[];
+extern const Gfx scuttlebug_seg6_dl_06014238[];
+extern const Gfx scuttlebug_seg6_dl_06014270[];
+extern const Gfx scuttlebug_seg6_dl_06014338[];
+extern const Gfx scuttlebug_seg6_dl_06014378[];
+extern const struct Animation *const scuttlebug_seg6_anims_06015064[];
+
 #include "mario/geo_header.h"
 
 #include "lantern/geo_header.h"
