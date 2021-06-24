@@ -1795,7 +1795,7 @@ s32 execute_mario_action(UNUSED struct Object *o) {
     }
     Vec3f pos = {gMarioState->pos[0],gMarioState->pos[1] + 650,gMarioState->pos[2]};
     if (gCurrLevelNum == LEVEL_BOB) {
-        emit_light(pos, 255, 255, 255, 0, 0, 10);
+        emit_light(pos, 255, 255, 255, 0, 0, 12);
     }
 
 

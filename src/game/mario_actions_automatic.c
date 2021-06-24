@@ -308,7 +308,7 @@ s32 perform_hanging_step(struct MarioState *m, Vec3f nextPos) {
 
     m->wall = resolve_and_return_wall_collisions(nextPos, 50.0f, 50.0f);
     floorHeight = find_floor(nextPos[0], nextPos[1], nextPos[2], &floor);
-    ceilHeight = vec3f_find_ceil(nextPos, nextPos[1], &ceil);
+    ceilHeight = vec3f_find_ceil(nextPos, floorHeight, &ceil);
 
     if (floor == NULL) {
         return HANG_HIT_CEIL_OR_OOB;
@@ -345,15 +345,15 @@ s32 perform_hanging_step(struct MarioState *m, Vec3f nextPos) {
 s32 update_hang_moving(struct MarioState *m) {
     s32 stepResult;
     Vec3f nextPos;
-    f32 maxSpeed = 4.0f;
+    f32 maxSpeed = 12.0f;
 
     m->forwardVel += 1.0f;
     if (m->forwardVel > maxSpeed) {
         m->forwardVel = maxSpeed;
     }
 
-    m->faceAngle[1] =
-        m->intendedYaw - approach_s32((s16)(m->intendedYaw - m->faceAngle[1]), 0, 0x800, 0x800);
+    m->faceAngle[1] = m->intendedYaw;
+        //m->intendedYaw - approach_s32((s16)(m->intendedYaw - m->faceAngle[1]), 0, 0x800, 0x800);
 
     m->slideYaw = m->faceAngle[1];
     m->slideVelX = m->forwardVel * sins(m->faceAngle[1]);

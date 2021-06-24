@@ -232,7 +232,7 @@ void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_1() {
 }
 void scroll_bob_dl_mainRoom_001_mesh_layer_5_vtx_0() {
 	int i = 0;
-	int count = 26;
+	int count = 36;
 	int width = 64 * 0x20;
 	int height = 64 * 0x20;
 

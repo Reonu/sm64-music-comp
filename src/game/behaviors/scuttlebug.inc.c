@@ -114,14 +114,13 @@ void bhv_scuttlebug_loop(void) {
             o->parentObj->oScuttlebugSpawnerUnk88 = 1;
     }
     cur_obj_move_standard(-50);
-    if (o->oFloor != NULL) {
-        switch ((o->oFloor->force >> 8) & 0xFF) {
-            case 0x06:
-                enemy_become_2d(1, 3000);
-            break;
-        }
+    switch ((o->oBehParams) & 0xFF) {
+        case 0x01:
+            enemy_become_2d(1, 3000);
+            break;   
     }
 }
+
 
 void bhv_scuttlebug_spawn_loop(void) {
     struct Object *scuttlebug;
