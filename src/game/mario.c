@@ -1742,6 +1742,46 @@ void scroll_sts_mat_castle_grounds_dl_waterTransparent_layer5() {
 	shift_t(mat, 20, PACK_TILESIZE(0, 1));
 };
 
+// #define DEBUG_INST
+#ifdef DEBUG_INST
+s32 toggle_inst(u32 button, u32 inst) {
+    if (gMarioState->controller->buttonPressed & button) {
+        if (gMarioState->instFlags & inst) gMarioState->instFlags &= ~inst;
+        else gMarioState->instFlags |= inst;
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
+void debug_inst(void) {
+    if (gMarioState->controller->buttonDown & L_TRIG) {
+        s32 changedInst = FALSE;
+        changedInst = changedInst || toggle_inst(U_CBUTTONS, INST_FLAG_DRUMS);
+        changedInst = changedInst || toggle_inst(R_CBUTTONS, INST_FLAG_BASS);
+        changedInst = changedInst || toggle_inst(D_CBUTTONS, INST_FLAG_SYNTH);
+        changedInst = changedInst || toggle_inst(L_CBUTTONS, INST_FLAG_ALL);
+        gMarioState->instChanged = changedInst;
+        print_text_fmt_int(20, 120, "DRUMS %d", gMarioState->instFlags & INST_FLAG_DRUMS ? 1 : 0);
+        print_text_fmt_int(20, 90,  "BASS  %d", gMarioState->instFlags & INST_FLAG_BASS ? 1 : 0);
+        print_text_fmt_int(20, 60,  "SYNTH %d", gMarioState->instFlags & INST_FLAG_SYNTH ? 1 : 0);
+        print_text_fmt_int(20, 30,  "ALL   %d", gMarioState->instFlags & INST_FLAG_ALL ? 1 : 0);
+    }
+}
+#endif
+
+void handle_inst(u32 inst, s32 channel) {
+    if (gMarioState->instFlags & inst) fade_channel_volume_scale(SEQ_PLAYER_LEVEL, channel, 127, 30);
+    else fade_channel_volume_scale(SEQ_PLAYER_LEVEL, channel, 0, 0);
+}
+
+void handle_inst_volumes(void) {
+    if (gMarioState->instFlags & INST_FLAG_ALL) gMarioState->instFlags = (INST_FLAG_ALL | INST_FLAG_DRUMS | INST_FLAG_BASS);
+    handle_inst(INST_FLAG_DRUMS, 0);
+    handle_inst(INST_FLAG_BASS, 1);
+    handle_inst(INST_FLAG_SYNTH, 2);
+    handle_inst(INST_FLAG_ALL, 3);
+}
 
 /**
  * Main function for executing Mario's behavior.
@@ -1770,6 +1810,11 @@ s32 execute_mario_action(UNUSED struct Object *o) {
         if (gMarioState->floor == NULL) {
             return 0;
         }
+
+#ifdef DEBUG_INST
+        debug_inst();
+#endif
+        handle_inst_volumes();
 
         switch ((gMarioState->force2 >> 8) & 0xFF)  {
             case 0x06:

@@ -347,6 +347,13 @@ struct MarioState
     /*0xC0*/ f32 quicksandDepth;
     /*0xC4*/ f32 unkC4;
              s16 force2;
+             u32 instFlags;
+             s8 instChanged;
 };
+
+#define INST_FLAG_DRUMS (1 << 0)
+#define INST_FLAG_BASS  (1 << 1)
+#define INST_FLAG_SYNTH (1 << 2)
+#define INST_FLAG_ALL   (1 << 3)
 
 #endif // TYPES_H

@@ -75,7 +75,7 @@ const LevelScript level_castle_grounds_entry[] = {
 		OBJECT(MODEL_NONE, 2649, -4007, 2152, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
 		TERRAIN(castle_grounds_area_1_collision),
 		MACRO_OBJECTS(castle_grounds_area_1_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_HUB),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 	END_AREA(),
 
