@@ -1776,7 +1776,12 @@ void handle_inst(u32 inst, s32 channel) {
 }
 
 void handle_inst_volumes(void) {
-    if (gMarioState->instFlags & INST_FLAG_ALL) gMarioState->instFlags = (INST_FLAG_ALL | INST_FLAG_DRUMS | INST_FLAG_BASS);
+    if (
+        gMarioState->instFlags == (INST_FLAG_SYNTH | INST_FLAG_DRUMS | INST_FLAG_BASS) ||
+        gMarioState->instFlags & INST_FLAG_ALL
+    ) {
+        gMarioState->instFlags = (INST_FLAG_ALL | INST_FLAG_DRUMS | INST_FLAG_BASS);
+    }
     handle_inst(INST_FLAG_DRUMS, 0);
     handle_inst(INST_FLAG_BASS, 1);
     handle_inst(INST_FLAG_SYNTH, 2);
@@ -1996,6 +2001,8 @@ void init_mario(void) {
 
         capObject->oMoveAngleYaw = 0;
     }
+
+    gMarioState->instFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_BOB - 1);
 }
 
 void init_mario_from_save_file(void) {
@@ -2021,4 +2028,6 @@ void init_mario_from_save_file(void) {
 
     gHudDisplay.coins = 0;
     gHudDisplay.wedges = 8;
+
+    gMarioState->instFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_BOB - 1);
 }
