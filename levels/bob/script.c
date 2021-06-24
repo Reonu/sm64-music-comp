@@ -136,6 +136,12 @@ const LevelScript level_bob_entry[] = {
 	END_AREA(),
 
 	AREA(4, bob_area_4),
+		WARP_NODE(0xF1, LEVEL_BOB, 0x04, 0x10, WARP_NO_CHECKPOINT),
+		INSTANT_WARP(0x05, 0x01, 0, 0, 0),
+		OBJECT(MODEL_NONE, -9127, -7363, 16728, 0, 0, 0, 0x00100000, bhvInstantActiveWarp),
+		OBJECT(MODEL_SCUTTLEBUG, -11327, -7768, 16728, 0, 0, 0, 0x00000000, bhvScuttlebug),
+		OBJECT(MODEL_NONE, -8904, -7363, 16728, 0, 0, 0, 0x00000000, bhvBirdsSoundLoop),
+		OBJECT(MODEL_NONE, -8692, -7768, 16728, 0, 0, 0, 0x00100000, bhvSnap2d),
 		TERRAIN(bob_area_4_collision),
 		MACRO_OBJECTS(bob_area_4_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
