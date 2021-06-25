@@ -279,12 +279,22 @@ void bhv_bobomb_fuse_smoke_init(void) {
 }
 
 void bhv_bobomb_buddy_init(void) {
+    u8 specialToad = ((o->oBehParams) & 0xFF);
     o->oGravity = 2.5;
     o->oFriction = 0.8;
     o->oBuoyancy = 1.3;
     o->oInteractionSubtype = INT_SUBTYPE_NPC;
-    o->oEnvRGB = (random_u16() << 16) | random_u16();
-    o->oPrimRGB = (random_u16() << 16) | random_u16();
+    switch (specialToad) {
+        case 0x01:
+            o->oEnvRGB = 0xFF0000;
+            o->oPrimRGB = 0xFFFF00;
+            break;
+        default:
+            o->oEnvRGB = (random_u16() << 16) | random_u16();
+            o->oPrimRGB = (random_u16() << 16) | random_u16();
+            break;
+    }
+
 }
 
 void bobomb_buddy_act_idle(void) {
@@ -359,12 +369,15 @@ void bobomb_buddy_cannon_dialog(s16 dialogFirstText, s16 dialogSecondText) {
 }
 
 void bobomb_buddy_act_talk(void) {
+    u8 dialogModifier;
+    dialogModifier = (gMarioState->numStars * 10);
+
     if (set_mario_npc_dialog(1) == 2) {
         o->activeFlags |= ACTIVE_FLAG_INITIATED_TIME_STOP;
 
         switch (o->oBobombBuddyRole) {
             case BOBOMB_BUDDY_ROLE_ADVICE:
-                if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, o->oBehParams2ndByte)
+                if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, (o->oBehParams2ndByte + dialogModifier))
                     != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
                     set_mario_npc_dialog(0);
 
