@@ -1534,7 +1534,7 @@ void render_dialog_string_color(s8 linesPerBox) {
 }
 
 void handle_special_dialog_text(s16 dialogID) { // dialog ID tables, in order
-    // King Bob-omb (Start), Whomp (Start), King Bob-omb (throw him out), Eyerock (Start), Wiggler (Start)
+    /*// King Bob-omb (Start), Whomp (Start), King Bob-omb (throw him out), Eyerock (Start), Wiggler (Start)
     s16 dialogBossStart[] = { 17, 114, 128, 117, 150 };
     // Koopa the Quick (BOB), Koopa the Quick (THI), Penguin Race, Fat Penguin Race (120 stars)
     s16 dialogRaceSound[] = { 5, 9, 55, 164 };
@@ -1577,7 +1577,7 @@ void handle_special_dialog_text(s16 dialogID) { // dialog ID tables, in order
             seq_player_fade_out(SEQ_PLAYER_LEVEL, 1);
             return;
         }
-    }
+    }*/
 }
 
 s16 gMenuMode = -1;

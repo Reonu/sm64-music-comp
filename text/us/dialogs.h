@@ -16,46 +16,51 @@
 #define GIVE_UP "give"
 #endif
 
-DEFINE_DIALOG(DIALOG_000, 1, 6, 30, 200, _("\
-Wow! You're smack in the\n\
-middle of the battlefield.\n\
-You'll find the Power\n\
-Stars that Bowser stole\n\
-inside the painting\n\
-worlds.\n\
-First, talk to the\n\
-Bob-omb Buddy. (Press [B]\n\
-to talk.) He'll certainly\n\
-help you out, and so will\n\
-his " COMRADES " in other\n\
-areas.\n\
-To read signs, stop, face\n\
-them and press [B]. Press [A]\n\
-or [B] to scroll ahead. You\n\
-can talk to some other\n\
-characters by facing them\n\
-and pressing [B]."))
+DEFINE_DIALOG(DIALOG_000, 1, 7, 30, 200, _("\
+Hey! Where did you\n\
+come from?\n\
+Sorry, but we're not\n\
+in the best condition\n\
+to help you.\n\
+We're in trouble\n\
+ourselves!\n\
+You see, the most\n\
+important thing for\n\
+us on this town is\n\
+music. Without it,\n\
+we're nothing.\n\
+But we've lost our\n\
+instruments!\n\
+There can't be music\n\
+without instruments!\n\
+If you want us to help\n\
+you get back home,\n\
+you'll first have to\n\
+help us get our music\n\
+back!"))
 
-DEFINE_DIALOG(DIALOG_001, 1, 4, 95, 200, _("\
-Watch out! If you wander\n\
-around here, you're liable\n\
-to be " PLASTERED " by a\n\
-water bomb!\n\
-Those enemy Bob-ombs love\n\
-to fight, and they're\n\
-always finding ways to\n\
-attack.\n\
-This meadow has become\n\
-a battlefield ever since\n\
-the Big Bob-omb got his\n\
-paws on the Power Star.\n\
-Can you recover the Star\n\
-for us? Cross the bridge\n\
-and go left up the path\n\
-to find the Big Bob-omb.\n\
-Please come back to see\n\
-me after you've retrieved\n\
-the Power Star!"))
+DEFINE_DIALOG(DIALOG_001, 1, 7, 95, 200, _("\
+Welcome to Treble in\n\
+Paradise, made by\n\
+Reonu and thecozies!\n\
+\n\
+\n\
+\n\
+\n\
+This hack uses my epic\n\
+custom camera, you can\n\
+rotate it slowly by\n\
+holding the C buttons\n\
+or flick it by tapping\n\
+them.\n\
+\n\
+Thanks to the entire\n\
+Simpleflips community\n\
+as always for the help\n\
+Shoutouts to Simpleflips\n\
+for choosing literally\n\
+my busiest month of\n\
+the year to host the comp"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
 Hey, you! It's dangerous\n\

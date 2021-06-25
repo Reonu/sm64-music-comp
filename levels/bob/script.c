@@ -153,7 +153,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_AMP, -5048, -3937, 17062, 0, 0, 0, 0x02000000, bhvCirclingAmp),
 		OBJECT(MODEL_AMP, -4501, -3971, 16376, 0, 0, 0, 0x01000001, bhvCirclingAmp),
 		OBJECT(MODEL_AMP, -3978, -3937, 17062, 0, 0, 0, 0x02000000, bhvCirclingAmp),
-		OBJECT(MODEL_NONE, -9127, -7363, 16728, 0, 0, 0, 0x00100000, bhvInstantActiveWarp),
+		OBJECT(MODEL_NONE, -9127, -7363, 16728, 0, 0, 0, 0x00100001, bhvInstantActiveWarp),
 		OBJECT(MODEL_BREAKABLE_BOX_SMALL, -11041, -5374, 16702, 0, 0, 0, 0x00000000, bhvHiddenObject),
 		OBJECT(MODEL_BREAKABLE_BOX_SMALL, -11365, -5781, 16702, 0, 0, 0, 0x00000000, bhvHiddenObject),
 		OBJECT(MODEL_PURPLE_SWITCH, -12444, -5930, 16702, 0, 0, 0, 0x00000000, bhvFloorSwitchHiddenObjects),
