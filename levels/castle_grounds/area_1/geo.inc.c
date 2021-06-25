@@ -9,6 +9,8 @@ const GeoLayout castle_grounds_area_1_geo[] = {
 		GEO_CLOSE_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_B_MiddleGround_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_B_Path_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -156, -6585, 8735, castle_grounds_dl_B_Rock2Visual_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -156, -6585, 8735, castle_grounds_dl_B_RockVisual_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_C_LowGround_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_D_GroundPlaza2_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_E_Beach_mesh_layer_1),
