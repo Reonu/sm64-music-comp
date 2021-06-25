@@ -41,6 +41,7 @@
 #define MODEL_SNOW_BOULDER                0x10C
 #define MODEL_SCUTTLEBUG                  0x10D
 #define MODEL_DRUM_MACHINE                0x10E
+#define MODEL_DRUM_MACHINE_COLLECTED      0x10F
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 

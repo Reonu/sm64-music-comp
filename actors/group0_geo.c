@@ -39,3 +39,4 @@
 #include "scuttlebug/geo.inc.c"
 
 #include "drum_machine/geo.inc.c"
+#include "drum_machine_collected/geo.inc.c"

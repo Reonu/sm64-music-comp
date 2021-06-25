@@ -66,3 +66,4 @@
 #include "scuttlebug/anims/data.inc.c"
 #include "scuttlebug/anims/table.inc.c"
 #include "drum_machine/model.inc.c"
+#include "drum_machine_collected/model.inc.c"

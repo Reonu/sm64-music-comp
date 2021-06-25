@@ -1,0 +1,9 @@
+extern const GeoLayout drum_machine_collected_geo[];
+extern u8 drum_machine_collected_Roland_TR_808_LOD_rgba16[];
+extern Vtx drum_machine_collected_DrumMachineCollected_mesh_layer_5_vtx_cull[8];
+extern Vtx drum_machine_collected_DrumMachineCollected_mesh_layer_5_vtx_0[53];
+extern Gfx drum_machine_collected_DrumMachineCollected_mesh_layer_5_tri_0[];
+extern Gfx mat_drum_machine_collected_drumcollected[];
+extern Gfx mat_revert_drum_machine_collected_drumcollected[];
+extern Gfx drum_machine_collected_DrumMachineCollected_mesh_layer_5[];
+extern Gfx drum_machine_collected_material_revert_render_settings[];

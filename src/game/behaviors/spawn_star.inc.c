@@ -10,7 +10,7 @@ ModelID get_star_model_id(void) {
     u8 currentLevelStarFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, gCurrCourseNum - 1);
     s8 isCollected = currentLevelStarFlags & (1 << starId);
 
-    if (starId == INST_FLAG_DRUMS) return MODEL_DRUM_MACHINE;
+    if (starId == INST_FLAG_DRUMS) return isCollected ? MODEL_DRUM_MACHINE_COLLECTED : MODEL_DRUM_MACHINE;
     else return MODEL_STAR;
 }
 

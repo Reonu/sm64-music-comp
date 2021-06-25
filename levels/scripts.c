@@ -131,6 +131,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SNOW_BOULDER,             snow_boulder_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SCUTTLEBUG,               scuttlebug_geo),
     LOAD_MODEL_FROM_GEO(MODEL_DRUM_MACHINE,             drum_machine_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_DRUM_MACHINE_COLLECTED,   drum_machine_collected_geo),
     FREE_LEVEL_POOL(),
     CALL(/*arg*/ 0, /*func*/ lvl_init_from_save_file),
     LOOP_BEGIN(),
