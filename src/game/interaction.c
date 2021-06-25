@@ -767,12 +767,16 @@ u32 interact_water_ring(struct MarioState *m, UNUSED u32 interactType, struct Ob
 }
 
 u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
-    u32 starIndex;
     u32 starGrabAction = ACT_STAR_DANCE_EXIT;
     u32 noExit = 1;
     u32 grandStar = (o->oInteractionSubtype & INT_SUBTYPE_GRAND_STAR) != 0;
 
     if (m->health >= 0x100) {
+        u32 starIndex = (o->oBehParams >> 24) & 0x1F;
+        u8 currentLevelStarFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, gCurrCourseNum - 1);
+        s8 starFlag = (1 << starIndex);
+        s8 wasCollected = (currentLevelStarFlags & starFlag) != 0;
+
         mario_stop_riding_and_holding(m);
 #if ENABLE_RUMBLE
         queue_rumble_data(5, 80);
@@ -832,7 +836,7 @@ u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct O
             return set_mario_action(m, ACT_JUMBO_STAR_CUTSCENE, 0);
         }
 
-        return set_mario_action(m, starGrabAction, noExit + 2 * grandStar);
+        return set_mario_action(m, starGrabAction, noExit | starIndex << 24 | (wasCollected ? 1 << 16 : 0));
     }
 
     return FALSE;

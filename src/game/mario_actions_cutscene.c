@@ -593,8 +593,13 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
     s32 dialogID;
     if (m->actionState == 0) {
         switch (++m->actionTimer) {
-            case 1:
-                spawn_object(m->marioObj, MODEL_STAR, bhvCelebrationStar);
+            case 1: {
+                struct Object *obj;
+                u32 starId = (m->actionArg >> 24) & 0xFF;
+                u32 isCollected = (m->actionArg >> 16) & 0xFF;
+
+                obj = spawn_object(m->marioObj, MODEL_STAR, bhvCelebrationStar);
+                obj->oBehParams = ((starId << 24) | (isCollected << 16));
                 disable_background_sound();
                 if (m->actionArg & 1) {
                     //play_course_clear();
@@ -606,6 +611,7 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                     }*/
                 }
                 break;
+            }
 
             case 42:
                 play_sound(SOUND_MARIO_HERE_WE_GO, m->marioObj->header.gfx.cameraToObject);
