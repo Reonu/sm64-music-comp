@@ -6,6 +6,7 @@ extern void scroll_bob_dl_Lake_mesh_layer_1_vtx_0();
 extern void scroll_bob_dl_room2_mesh_layer_1_vtx_1();
 extern void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_0();
 extern void scroll_bob_dl_Waterfall_mesh_layer_1_vtx_0();
-extern void scroll_bob_dl_A_Part1_mesh_layer_1_vtx_2();
+extern void scroll_bob_dl_A_Part1_mesh_layer_1_vtx_3();
+extern void scroll_bob_dl_A_Part1_mesh_layer_1_vtx_4();
 extern void scroll_bob_dl_Z_background_mesh_layer_1_vtx_1();
 extern void scroll_bob();
