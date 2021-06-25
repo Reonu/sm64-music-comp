@@ -1,0 +1,9 @@
+extern const GeoLayout nordlead2_collected_geo[];
+extern u8 nordlead2_collected_nordlead2_LOD_rgba16[];
+extern Vtx nordlead2_collected_NordLead2Collected_mesh_layer_5_vtx_cull[8];
+extern Vtx nordlead2_collected_NordLead2Collected_mesh_layer_5_vtx_0[12];
+extern Gfx nordlead2_collected_NordLead2Collected_mesh_layer_5_tri_0[];
+extern Gfx mat_nordlead2_collected_nordcollected_layer5[];
+extern Gfx mat_revert_nordlead2_collected_nordcollected_layer5[];
+extern Gfx nordlead2_collected_NordLead2Collected_mesh_layer_5[];
+extern Gfx nordlead2_collected_material_revert_render_settings[];
