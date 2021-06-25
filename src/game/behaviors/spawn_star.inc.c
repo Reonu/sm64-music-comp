@@ -1,6 +1,18 @@
 #include "config.h"
 
+#include "types.h"
+#include "model_ids.h"
+
 // spawn_default_star.c.inc
+
+ModelID get_star_model_id(void) {
+    s8 starId = (o->oBehParams >> 24) & 0xFF;
+    u8 currentLevelStarFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, gCurrCourseNum - 1);
+    s8 isCollected = currentLevelStarFlags & (1 << starId);
+
+    if (starId == INST_FLAG_DRUMS) return MODEL_DRUM_MACHINE;
+    else return MODEL_STAR;
+}
 
 static struct ObjectHitbox sCollectStarHitbox = {
     /* interactType:      */ INTERACT_STAR_OR_KEY,
@@ -17,25 +29,16 @@ static struct ObjectHitbox sCollectStarHitbox = {
 void bhv_collect_star_init(void) {
     s8 starId;
     u8 currentLevelStarFlags;
-
-    starId = (o->oBehParams >> 24) & 0xFF;
-#ifdef GLOBAL_STAR_IDS
-    currentLevelStarFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, (starId/7) - 1);
-    if (currentLevelStarFlags & (1 << (starId % 7))) {
-#else
-    currentLevelStarFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, gCurrCourseNum - 1);
-    if (currentLevelStarFlags & (1 << starId)) {
-#endif
-        o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_TRANSPARENT_STAR];
-    } else {
-        o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_STAR];
-    }
+    ModelID id = get_star_model_id();
+    o->header.gfx.sharedChild = gLoadedGraphNodes[id];
 
     obj_set_hitbox(o, &sCollectStarHitbox);
 }
 
 void bhv_collect_star_loop(void) {
-    o->oFaceAngleYaw += 0x800;
+    Vec3f pos = { o->oPosX, o->oPosY + 200, o->oPosZ };
+    emit_light(pos, 255, 255, 255, 0, 0, 10);
+    o->oFaceAngleYaw += 0x400;
 
     if (o->oInteractStatus & INT_STATUS_INTERACTED) {
         mark_obj_for_deletion(o);
