@@ -56,56 +56,48 @@ them.\n\
 \n\
 Thanks to the entire\n\
 Simpleflips community\n\
-as always for the help\n\
+as always for the help.\n\
 Shoutouts to Simpleflips\n\
 for choosing literally\n\
 my busiest month of\n\
 the year to host the comp"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
-Hey, you! It's dangerous\n\
-ahead, so listen up! Take\n\
-my advice.\n\
+Without our music, it's\n\
+just not the same!"))
+
+DEFINE_DIALOG(DIALOG_003, 1, 3, 95, 200, _("\
+Have you noticed that\n\
+there's light coming from\n\
+our heads?\n\
+Well, it's even stronger\n\
+when we have our music..."))
+
+DEFINE_DIALOG(DIALOG_004, 1, 6, 95, 200, _("\
+Nadie me entiende!\n\
+Acabe aqui sin querer\n\
+mientras viajaba a\n\
+Tenerife porque de\n\
+repente hubo tormenta y\n\
+me trajo a esta costa!\n\
+Y como tengo la ropa de\n\
+baile, estos estupidos\n\
+Toads se piensan que\n\
+vengo de fiesta!\n\
 \n\
-Cross the two\n\
-bridges ahead, then\n\
-watch for falling\n\
-water bombs.\n\
-The Big Bob-omb at the\n\
-top of the mountain is\n\
-very powerful--don't let\n\
-him grab you!\n\
-We're Bob-omb Buddies,\n\
-and we're on your side.\n\
-You can talk to us\n\
-whenever you'd like to!"))
-
-DEFINE_DIALOG(DIALOG_003, 1, 5, 95, 200, _("\
-Thank you, Mario! The Big\n\
-Bob-omb is nothing but a\n\
-big dud now! But the\n\
-battle for the castle has\n\
-just begun.\n\
-Other enemies are holding\n\
-the other Power Stars. If\n\
-you recover more Stars,\n\
-you can open new doors\n\
-that lead to new worlds!\n\
-My Bob-omb Buddies are\n\
-waiting for you. Be sure\n\
-to talk to them--they'll\n\
-set up cannons for you."))
-
-DEFINE_DIALOG(DIALOG_004, 1, 3, 95, 200, _("\
-We're peace-loving\n\
-Bob-ombs, so we don't use\n\
-cannons.\n\
-But if you'd like\n\
-to blast off, we don't\n\
-mind. Help yourself.\n\
-We'll prepare all of the\n\
-cannons in this course for\n\
-you to use. Bon Voyage!"))
+No entienden ni una\n\
+puta palabra de lo que\n\
+digo! Tio, esto es\n\
+exactamente el tipo de\n\
+cosa que SIEMPRE me pasa\n\
+a mi.\n\
+He tenido mala suerte\n\
+desde que robe una figura\n\
+de vudu de una bruja,\n\
+pero tenia 6 anos y no\n\
+sabia que tenia significado\n\
+religioso.\n\
+En fin."))
 
 DEFINE_DIALOG(DIALOG_005, 1, 3, 30, 200, _("\
 Hey, Mario! Is it true\n\
