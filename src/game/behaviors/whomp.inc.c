@@ -40,13 +40,13 @@ void whomp_act_7(void) {
     if (o->oSubAction == 0) {
         o->oForwardVel = 0.0f;
         cur_obj_init_animation_with_accel_and_sound(0, 1.0f);
-        if (o->oTimer > 31)
+        if (o->oTimer > 21)
             o->oSubAction++;
         else
             o->oMoveAngleYaw += 0x400;
     } else {
         o->oForwardVel = 3.0f;
-        if (o->oTimer > 42)
+        if (o->oTimer > 32)
             o->oAction = 1;
     }
     whomp_play_sfx_from_pound_animation();
@@ -82,7 +82,7 @@ void whomp_act_2(void) {
     cur_obj_init_animation_with_accel_and_sound(0, 1.0f);
     o->oForwardVel = 3.0f;
     cur_obj_rotate_yaw_toward(o->oAngleToMario, 0x200);
-    if (o->oTimer > 30) {
+    if (o->oTimer > 15) {
         sp1E = abs_angle_diff(o->oAngleToMario, o->oMoveAngleYaw);
         if (sp1E < 0x2000) {
             if (o->oDistanceToMario < 1500.0f) {
