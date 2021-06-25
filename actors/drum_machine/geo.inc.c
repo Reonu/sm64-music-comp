@@ -3,7 +3,10 @@
 const GeoLayout drum_machine_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_BILLBOARD_WITH_PARAMS_AND_DL(5, 0, 0, 0, drum_machine_APlane_mesh_layer_5),
+		GEO_RENDER_RANGE(-20, 5000),
+		GEO_OPEN_NODE(),
+			GEO_BILLBOARD_WITH_PARAMS_AND_DL(5, 0, 0, 0, drum_machine_APlane_mesh_layer_5),
+		GEO_CLOSE_NODE(),
 		GEO_RENDER_RANGE(-200, 1000),
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(1, drum_machine_DrumMachine_mesh_layer_1),
