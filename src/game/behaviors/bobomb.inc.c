@@ -448,7 +448,7 @@ void bhv_bobomb_buddy_loop(void) {
             break;
         case 03:
             anim = 1;
-            falloff = 90;
+            falloff = 80;
             break;
     }
     cur_obj_init_animation(anim);
