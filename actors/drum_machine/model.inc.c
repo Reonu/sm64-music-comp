@@ -1721,7 +1721,7 @@ Gfx mat_drum_machine_fade_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0),
 	gsSPClearGeometryMode(G_ZBUFFER),
-	gsDPSetRenderMode(G_RM_ZB_CLD_SURF, G_RM_ZB_CLD_SURF2),
+	gsDPSetRenderMode(G_RM_CLD_SURF, G_RM_CLD_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPTileSync(),
 	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b, 64, drum_machine_fade_i8),
