@@ -54,6 +54,7 @@ const GeoLayout bob_dl_2Room_geo[] = {
 			GEO_OPEN_NODE(),
 				GEO_ASM(0, geo_update_fog),
 				GEO_DISPLAY_LIST(1, bob_dl_room2_003_mesh_layer_1),
+				GEO_DISPLAY_LIST(5, bob_dl_room2_003_mesh_layer_5),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
@@ -81,8 +82,9 @@ const GeoLayout bob_area_3[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(6, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
