@@ -462,4 +462,6 @@ extern const struct Animation *const scuttlebug_seg6_anims_06015064[];
 
 #include "snow_boulder/geo_header.h"
 
+#include "drum_machine/geo_header.h"
+
 #endif

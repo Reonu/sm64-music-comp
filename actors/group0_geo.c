@@ -37,3 +37,5 @@
 #include "snow_boulder/geo.inc.c"
 
 #include "scuttlebug/geo.inc.c"
+
+#include "drum_machine/geo.inc.c"

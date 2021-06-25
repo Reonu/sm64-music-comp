@@ -65,3 +65,4 @@
 #include "scuttlebug/model.inc.c"
 #include "scuttlebug/anims/data.inc.c"
 #include "scuttlebug/anims/table.inc.c"
+#include "drum_machine/model.inc.c"
