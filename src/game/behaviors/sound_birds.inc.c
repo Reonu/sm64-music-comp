@@ -19,7 +19,7 @@ void bhv_birds_sound_loop(void) {
             break;
     }*/
     Vec3f dir = {0.0f, -1.0f, 0.0f};
-    u8 lightLevel = gIsConsole ? 115 : 95;
+    u8 lightLevel = gIsConsole ? 105 : 85;
     set_directional_light(dir, lightLevel, lightLevel, lightLevel+10);
     set_ambient_light(lightLevel/3,lightLevel/3,(lightLevel/3)+10);
     //print_text_fmt_int(20,20,"%d",lightLevel);
