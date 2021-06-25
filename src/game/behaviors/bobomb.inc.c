@@ -432,10 +432,24 @@ void bhv_bobomb_buddy_loop(void) {
     bobomb_buddy_actions();
     u8 bparam1 = (o->oBehParams >> 24) & 0xFF;
     u8 anim;
-    if (gMarioState->numStars == 0) {
-        anim = 0;
-    } else  {
-        anim = 1;
+    u8 falloff;
+    switch (gMarioState->numStars) {
+        case 00:
+            anim = 0;
+            falloff = 150;
+            break;
+        case 01:
+            anim = 1;
+            falloff = 120;
+            break;
+        case 02:
+            anim = 1;
+            falloff = 110;
+            break;
+        case 03:
+            anim = 1;
+            falloff = 90;
+            break;
     }
     cur_obj_init_animation(anim);
     curr_obj_random_blink(&o->oBobombBuddyBlinkTimer);
@@ -444,7 +458,7 @@ void bhv_bobomb_buddy_loop(void) {
     u8 g = (o->oPrimRGB >> 8) & 0xff;
     u8 b = o->oPrimRGB & 0xff;
     Vec3f pos = {o->oPosX, o->oPosY + 300, o->oPosZ};
-    emit_light(pos, r, g, b, 0, 0, 90);
+    emit_light(pos, r, g, b, 0, 0, falloff);
 
     o->oInteractStatus = 0;
 }

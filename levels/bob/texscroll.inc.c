@@ -1,4 +1,4 @@
-void scroll_bob_dl_B_MountainAreaVisual_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_B_MountainAreaVisual_mesh_layer_1_vtx_6() {
 	int i = 0;
 	int count = 52;
 	int width = 64 * 0x20;
@@ -8,7 +8,7 @@ void scroll_bob_dl_B_MountainAreaVisual_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_B_MountainAreaVisual_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_B_MountainAreaVisual_mesh_layer_1_vtx_6);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -28,7 +28,7 @@ void scroll_bob_dl_B_MountainAreaVisual_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_fakeRoom2_001_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_fakeRoom2_001_mesh_layer_1_vtx_1() {
 	int i = 0;
 	int count = 32;
 	int width = 64 * 0x20;
@@ -38,7 +38,7 @@ void scroll_bob_dl_fakeRoom2_001_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_fakeRoom2_001_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_fakeRoom2_001_mesh_layer_1_vtx_1);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -58,7 +58,7 @@ void scroll_bob_dl_fakeRoom2_001_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_mainRoom_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_mainRoom_mesh_layer_1_vtx_9() {
 	int i = 0;
 	int count = 34;
 	int width = 64 * 0x20;
@@ -68,7 +68,7 @@ void scroll_bob_dl_mainRoom_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_mainRoom_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_mainRoom_mesh_layer_1_vtx_9);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -88,7 +88,7 @@ void scroll_bob_dl_mainRoom_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_fakeRoom1_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_fakeRoom1_mesh_layer_1_vtx_5() {
 	int i = 0;
 	int count = 40;
 	int width = 64 * 0x20;
@@ -98,7 +98,7 @@ void scroll_bob_dl_fakeRoom1_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_fakeRoom1_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_fakeRoom1_mesh_layer_1_vtx_5);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -118,7 +118,7 @@ void scroll_bob_dl_fakeRoom1_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_Lake_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_Lake_mesh_layer_1_vtx_0() {
 	int i = 0;
 	int count = 15;
 	int width = 64 * 0x20;
@@ -128,7 +128,7 @@ void scroll_bob_dl_Lake_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_Lake_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_Lake_mesh_layer_1_vtx_0);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -148,7 +148,7 @@ void scroll_bob_dl_Lake_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_room2_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_room2_mesh_layer_1_vtx_1() {
 	int i = 0;
 	int count = 32;
 	int width = 64 * 0x20;
@@ -158,7 +158,7 @@ void scroll_bob_dl_room2_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_room2_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_room2_mesh_layer_1_vtx_1);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -200,7 +200,7 @@ void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_1() {
+void scroll_bob_dl_Waterfall_mesh_layer_1_vtx_0() {
 	int i = 0;
 	int count = 24;
 	int width = 64 * 0x20;
@@ -210,7 +210,7 @@ void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_1() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_Waterfall_mesh_layer_5_vtx_1);
+	Vtx *vertices = segmented_to_virtual(bob_dl_Waterfall_mesh_layer_1_vtx_0);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -230,7 +230,7 @@ void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_1() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_A_Part1_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_A_Part1_mesh_layer_1_vtx_2() {
 	int i = 0;
 	int count = 37;
 	int width = 64 * 0x20;
@@ -240,7 +240,7 @@ void scroll_bob_dl_A_Part1_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_A_Part1_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_A_Part1_mesh_layer_1_vtx_2);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -260,7 +260,7 @@ void scroll_bob_dl_A_Part1_mesh_layer_5_vtx_0() {
 	currentY += deltaY;
 
 }
-void scroll_bob_dl_Z_background_mesh_layer_5_vtx_0() {
+void scroll_bob_dl_Z_background_mesh_layer_1_vtx_1() {
 	int i = 0;
 	int count = 8;
 	int width = 64 * 0x20;
@@ -270,7 +270,7 @@ void scroll_bob_dl_Z_background_mesh_layer_5_vtx_0() {
 	int deltaX;
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(bob_dl_Z_background_mesh_layer_5_vtx_0);
+	Vtx *vertices = segmented_to_virtual(bob_dl_Z_background_mesh_layer_1_vtx_1);
 
 	deltaX = (int)(0.10000000149011612 * 0x20) % width;
 	deltaY = (int)(0.10000000149011612 * 0x20) % height;
@@ -291,14 +291,14 @@ void scroll_bob_dl_Z_background_mesh_layer_5_vtx_0() {
 
 }
 void scroll_bob() {
-	scroll_bob_dl_B_MountainAreaVisual_mesh_layer_5_vtx_0();
-	scroll_bob_dl_fakeRoom2_001_mesh_layer_5_vtx_0();
-	scroll_bob_dl_mainRoom_mesh_layer_5_vtx_0();
-	scroll_bob_dl_fakeRoom1_mesh_layer_5_vtx_0();
-	scroll_bob_dl_Lake_mesh_layer_5_vtx_0();
-	scroll_bob_dl_room2_mesh_layer_5_vtx_0();
+	scroll_bob_dl_B_MountainAreaVisual_mesh_layer_1_vtx_6();
+	scroll_bob_dl_fakeRoom2_001_mesh_layer_1_vtx_1();
+	scroll_bob_dl_mainRoom_mesh_layer_1_vtx_9();
+	scroll_bob_dl_fakeRoom1_mesh_layer_1_vtx_5();
+	scroll_bob_dl_Lake_mesh_layer_1_vtx_0();
+	scroll_bob_dl_room2_mesh_layer_1_vtx_1();
 	scroll_bob_dl_Waterfall_mesh_layer_5_vtx_0();
-	scroll_bob_dl_Waterfall_mesh_layer_5_vtx_1();
-	scroll_bob_dl_A_Part1_mesh_layer_5_vtx_0();
-	scroll_bob_dl_Z_background_mesh_layer_5_vtx_0();
+	scroll_bob_dl_Waterfall_mesh_layer_1_vtx_0();
+	scroll_bob_dl_A_Part1_mesh_layer_1_vtx_2();
+	scroll_bob_dl_Z_background_mesh_layer_1_vtx_1();
 }
