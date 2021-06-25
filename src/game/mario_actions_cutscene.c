@@ -591,25 +591,34 @@ s32 act_debug_free_move(struct MarioState *m) {
 
 void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
     s32 dialogID;
+    u32 starId = (m->actionArg >> 24) & 0xFF;
+    if (m->actionTimer > 40) {
+        //print_text((20), 200, "YOU GOT AN INSTRUMENT!");
+        switch (starId) {
+            case 0x00:
+                print_text((50), 180, "YOU GOT THE DRUMS!");
+                print_text(115, 40, "SAVING");
+                break;
+            case 0x01:
+                print_text((50), 180, "YOU GOT THE BASS!");
+                print_text(115, 40, "SAVING");
+                break;
+            case 0x02:
+                print_text((50), 180, "YOU GOT THE SYNTH!");
+                print_text(115, 40, "SAVING");
+                break;
+        }
+        
+    }
     if (m->actionState == 0) {
         switch (++m->actionTimer) {
             case 1: {
                 struct Object *obj;
-                u32 starId = (m->actionArg >> 24) & 0xFF;
                 u32 isCollected = (m->actionArg >> 16) & 0xFF;
 
                 obj = spawn_object(m->marioObj, MODEL_STAR, bhvCelebrationStar);
                 obj->oBehParams = ((starId << 24) | (isCollected << 16));
                 disable_background_sound();
-                if (m->actionArg & 1) {
-                    //play_course_clear();
-                } else {
-                    /*if (gCurrLevelNum == LEVEL_BOWSER_1 || gCurrLevelNum == LEVEL_BOWSER_2) {
-                        play_music(SEQ_PLAYER_ENV, SEQUENCE_ARGS(15, SEQ_EVENT_CUTSCENE_COLLECT_KEY), 0);
-                    } else {
-                        play_music(SEQ_PLAYER_ENV, SEQUENCE_ARGS(15, SEQ_EVENT_CUTSCENE_COLLECT_STAR), 0);
-                    }*/
-                }
                 break;
             }
 
@@ -618,24 +627,24 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                 break;
 
             case 80:
-                if ((m->actionArg & 1) == 0) {
+                /*if ((m->actionArg & 1) == 0) {
                     level_trigger_warp(m, WARP_OP_STAR_EXIT);
                 } else {
                     enable_time_stop();
-                    create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
+                    create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);*/
                     m->actionState = 1;
-                }
+                //}
                 break;
         }
-    } else if (m->actionState == 1 && gDialogResponse) {
-        if (gDialogResponse == 1) {
+    } else if (m->actionState == 1) {
+        //if (gDialogResponse == 1) {
             save_file_do_save(gCurrSaveFileNum - 1);
-        }
+        //}
         m->actionState = 2;
     } else if (m->actionState == 2 && is_anim_at_end(m)) {
         disable_time_stop();
         enable_background_sound();
-        dialogID = get_star_collection_dialog(m);
+        //dialogID = get_star_collection_dialog(m);
         if (dialogID != 0) {
             // look up for dialog
             set_mario_action(m, ACT_READING_AUTOMATIC_DIALOG, dialogID);
