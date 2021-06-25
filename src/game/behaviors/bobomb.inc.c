@@ -418,7 +418,13 @@ void bobomb_buddy_actions(void) {
 void bhv_bobomb_buddy_loop(void) {
     bobomb_buddy_actions();
     u8 bparam1 = (o->oBehParams >> 24) & 0xFF;
-    cur_obj_init_animation(bparam1);
+    u8 anim;
+    if (gMarioState->numStars == 0) {
+        anim = 0;
+    } else  {
+        anim = 1;
+    }
+    cur_obj_init_animation(anim);
     curr_obj_random_blink(&o->oBobombBuddyBlinkTimer);
 
     u8 r = (o->oPrimRGB >> 16) & 0xff;
