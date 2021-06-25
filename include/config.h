@@ -86,7 +86,7 @@
  */
 #define WORLD_SCALE 3.5f
 
-#define TEST_STAGE LEVEL_BOB
+//#define TEST_STAGE LEVEL_BOB
 
 
 #endif // CONFIG_H
