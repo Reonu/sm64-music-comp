@@ -1798,9 +1798,9 @@ s32 execute_mario_action(UNUSED struct Object *o) {
         scroll_sts_mat_castle_grounds_dl_waterOpaque_layer1();
         scroll_sts_mat_castle_grounds_dl_waterTransparent_layer5();
     }
-    Vec3f pos = {gMarioState->pos[0],gMarioState->pos[1] + 650,gMarioState->pos[2]};
+    Vec3f pos = {gMarioState->pos[0],gMarioState->pos[1] + 550,gMarioState->pos[2]};
     if (gCurrLevelNum == LEVEL_BOB) {
-        emit_light(pos, 255, 255, 255, 0, 0, 12);
+        emit_light(pos, 255, 191, 104, 0, 0, 10);
     }
 
 
