@@ -1,0 +1,9 @@
+extern const GeoLayout slim_phatty_collected_geo[];
+extern u8 slim_phatty_collected_slim_phatty_LOD_rgba16[];
+extern Vtx slim_phatty_collected_SlimPhattyCollected_mesh_layer_5_vtx_cull[8];
+extern Vtx slim_phatty_collected_SlimPhattyCollected_mesh_layer_5_vtx_0[29];
+extern Gfx slim_phatty_collected_SlimPhattyCollected_mesh_layer_5_tri_0[];
+extern Gfx mat_slim_phatty_collected_slimphattyCollected[];
+extern Gfx mat_revert_slim_phatty_collected_slimphattyCollected[];
+extern Gfx slim_phatty_collected_SlimPhattyCollected_mesh_layer_5[];
+extern Gfx slim_phatty_collected_material_revert_render_settings[];

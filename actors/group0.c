@@ -67,3 +67,7 @@
 #include "scuttlebug/anims/table.inc.c"
 #include "drum_machine/model.inc.c"
 #include "drum_machine_collected/model.inc.c"
+#include "slim_phatty/model.inc.c"
+#include "slim_phatty_collected/model.inc.c"
+#include "nordlead2/model.inc.c"
+#include "nordlead2_collected/model.inc.c"

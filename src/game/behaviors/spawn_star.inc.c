@@ -8,9 +8,12 @@
 ModelID get_star_model_id(void) {
     s8 starId = (o->oBehParams >> 24) & 0xFF;
     u8 currentLevelStarFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, gCurrCourseNum - 1);
+    s8 starFlag = (1 << starId);
     s8 isCollected = currentLevelStarFlags & (1 << starId);
 
-    if (starId == INST_FLAG_DRUMS) return isCollected ? MODEL_DRUM_MACHINE_COLLECTED : MODEL_DRUM_MACHINE;
+    if (starFlag == INST_FLAG_DRUMS) return isCollected ? MODEL_DRUM_MACHINE_COLLECTED : MODEL_DRUM_MACHINE;
+    else if (starFlag == INST_FLAG_BASS) return isCollected ? MODEL_SLIM_PHATTY_COLLECTED : MODEL_SLIM_PHATTY;
+    else if (starFlag == INST_FLAG_SYNTH) return isCollected ? MODEL_NORD_LEAD2_COLLECTED : MODEL_NORD_LEAD2;
     else return MODEL_STAR;
 }
 

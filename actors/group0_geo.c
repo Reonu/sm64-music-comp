@@ -40,3 +40,7 @@
 
 #include "drum_machine/geo.inc.c"
 #include "drum_machine_collected/geo.inc.c"
+#include "slim_phatty/geo.inc.c"
+#include "slim_phatty_collected/geo.inc.c"
+#include "nordlead2/geo.inc.c"
+#include "nordlead2_collected/geo.inc.c"

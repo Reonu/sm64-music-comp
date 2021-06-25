@@ -42,6 +42,10 @@
 #define MODEL_SCUTTLEBUG                  0x10D
 #define MODEL_DRUM_MACHINE                0x10E
 #define MODEL_DRUM_MACHINE_COLLECTED      0x10F
+#define MODEL_SLIM_PHATTY                 0x110
+#define MODEL_SLIM_PHATTY_COLLECTED       0x111
+#define MODEL_NORD_LEAD2                  0x112
+#define MODEL_NORD_LEAD2_COLLECTED        0x113
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
