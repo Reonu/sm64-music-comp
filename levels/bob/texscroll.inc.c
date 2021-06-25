@@ -10,8 +10,8 @@ void scroll_bob_dl_B_MountainAreaVisual_mesh_layer_1_vtx_6() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_B_MountainAreaVisual_mesh_layer_1_vtx_6);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -40,8 +40,8 @@ void scroll_bob_dl_fakeRoom2_001_mesh_layer_1_vtx_1() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_fakeRoom2_001_mesh_layer_1_vtx_1);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -70,8 +70,8 @@ void scroll_bob_dl_mainRoom_mesh_layer_1_vtx_9() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_mainRoom_mesh_layer_1_vtx_9);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -100,8 +100,8 @@ void scroll_bob_dl_fakeRoom1_mesh_layer_1_vtx_5() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_fakeRoom1_mesh_layer_1_vtx_5);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -130,8 +130,8 @@ void scroll_bob_dl_Lake_mesh_layer_1_vtx_0() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_Lake_mesh_layer_1_vtx_0);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -150,7 +150,7 @@ void scroll_bob_dl_Lake_mesh_layer_1_vtx_0() {
 }
 void scroll_bob_dl_room2_mesh_layer_1_vtx_1() {
 	int i = 0;
-	int count = 32;
+	int count = 36;
 	int width = 64 * 0x20;
 	int height = 64 * 0x20;
 
@@ -160,8 +160,8 @@ void scroll_bob_dl_room2_mesh_layer_1_vtx_1() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_room2_mesh_layer_1_vtx_1);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -180,7 +180,7 @@ void scroll_bob_dl_room2_mesh_layer_1_vtx_1() {
 }
 void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_0() {
 	int i = 0;
-	int count = 6;
+	int count = 8;
 	int width = 64 * 0x20;
 	int height = 64 * 0x20;
 
@@ -202,7 +202,7 @@ void scroll_bob_dl_Waterfall_mesh_layer_5_vtx_0() {
 }
 void scroll_bob_dl_Waterfall_mesh_layer_1_vtx_0() {
 	int i = 0;
-	int count = 24;
+	int count = 22;
 	int width = 64 * 0x20;
 	int height = 64 * 0x20;
 
@@ -212,8 +212,8 @@ void scroll_bob_dl_Waterfall_mesh_layer_1_vtx_0() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_Waterfall_mesh_layer_1_vtx_0);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -242,8 +242,8 @@ void scroll_bob_dl_A_Part1_mesh_layer_1_vtx_2() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_A_Part1_mesh_layer_1_vtx_2);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
@@ -272,8 +272,8 @@ void scroll_bob_dl_Z_background_mesh_layer_1_vtx_1() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bob_dl_Z_background_mesh_layer_1_vtx_1);
 
-	deltaX = (int)(0.10000000149011612 * 0x20) % width;
-	deltaY = (int)(0.10000000149011612 * 0x20) % height;
+	deltaX = (int)(0.30000001192092896 * 0x20) % width;
+	deltaY = (int)(0.30000001192092896 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
