@@ -225,7 +225,7 @@
 #define TEXT_POWER_STARS_RESTORED __("We're sorry we didn't give you help when you needed it...\nBut we fixed this boat up so you can be on your way!")
 #define TEXT_THANKS_TO_YOU __("Espera!!")
 #define TEXT_THANK_YOU_MARIO __("No me dejes aqui!!")
-#define TEXT_SOMETHING_SPECIAL __("We have to do something special for you...")
+#define TEXT_SOMETHING_SPECIAL __("Fin.")
 #define TEXT_LISTEN_EVERYBODY _("Listen, everybody,")
 #define TEXT_LETS_HAVE_CAKE _("let's bake a delicious cake...")
 #define TEXT_FOR_MARIO _("...for Mario...")

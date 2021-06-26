@@ -1823,11 +1823,6 @@ s32 execute_mario_action(UNUSED struct Object *o) {
         debug_inst();
 #endif
 
-        if (gMarioState->controller->buttonPressed & R_TRIG) {
-            gShowingFinalCutscene = TRUE;
-            set_mario_action(gMarioState, ACT_FINAL_CUTSCENE, 0);
-        }
-
         handle_inst_volumes();
 
         switch ((gMarioState->force2 >> 8) & 0xFF)  {

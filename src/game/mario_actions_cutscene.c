@@ -1681,20 +1681,56 @@ s32 act_final_cutscene(struct MarioState *m) {
 
     m->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
 
+
     // dialogs
     if (gFinalCutsceneFrame == OUTRO_LOOK_AROUND + 5) {
         set_cutscene_message(SCREEN_WIDTH / 2, 200, 0, 60);
+    }
+    if (gFinalCutsceneFrame == OUTRO_SHOW_BOAT) {
+        m->boat = spawn_object_abs_with_rot(
+            gMarioObject,
+            0,
+            MODEL_BOAT,
+            bhvBoat,
+            -289,
+            -9209,
+            15255,
+            0,
+            0,
+            0
+        );
+        m->boat->oBehParams = 0x01000000;
     }
     if (gFinalCutsceneFrame == OUTRO_SHOW_BOAT + 5) {
         set_cutscene_message(SCREEN_WIDTH / 2, 200, 1, 120);
     }
     if (gFinalCutsceneFrame == OUTRO_TOAD_WAIT) {
+        struct Object *elToad;
         set_cutscene_message(SCREEN_WIDTH / 2, 200, 2, 20);
+        elToad = spawn_object_abs_with_rot(
+            gMarioObject,
+            0,
+            MODEL_TOAD_HEADPHONES,
+            bhvToadHeadphones,
+            -322,
+            -8769,
+            12630,
+            0,
+            0,
+            0
+        );
+        elToad->oBehParams = 1;
+        elToad->oAction = 4;
     }
     if (gFinalCutsceneFrame == OUTRO_TOAD_WAIT + 40) {
         set_cutscene_message(SCREEN_WIDTH / 2, 200, 3, 60);
     }
-    
+    if (gFinalCutsceneFrame == 1100) {
+        set_cutscene_message(SCREEN_WIDTH / 2, 200, 4, 150);
+    }
+    if (gFinalCutsceneFrame == 1250) {
+        fade_into_special_warp(-2, 0);
+    }
 
     if (gFinalCutsceneFrame < OUTRO_PUSHING_BOAT) {
         m->pos[0] = -386.0f;
@@ -1705,16 +1741,17 @@ s32 act_final_cutscene(struct MarioState *m) {
     }
     else if (gFinalCutsceneFrame < OUTRO_TOAD_WAIT + 15) {
         m->faceAngle[1] = DEGREES(0);
-        set_m_pos(-370, -9255, 14896);
+        set_m_pos(-189, -9255, 14896);
         set_mario_animation(m, MARIO_ANIM_PUSHING);
     }
     else if (gFinalCutsceneFrame < OUTRO_LEAVING_ON_BOAT) {
         m->faceAngle[1] = approach_yaw_sym(m->faceAngle[1], DEGREES(180), DEGREES(8)); // no turn towards toad
-        set_m_pos(-370, -9255, 14896);
+        set_m_pos(-189, -9255, 14896);
         handle_idle_anim(m);
     } else {
-        if (gFinalCutsceneFrame == OUTRO_LEAVING_ON_BOAT) set_m_pos(-456, -9266, 15238);
-        else m->pos[2] += 10.0f;
+        if (gFinalCutsceneFrame == OUTRO_LEAVING_ON_BOAT) set_m_pos(-192, -9266, 15193);
+        // else m->pos[2] += 10.0f;
+        m->boat->oPosZ += 10.0f;
         m->faceAngle[1] = DEGREES(5);
         handle_idle_anim(m);
     }

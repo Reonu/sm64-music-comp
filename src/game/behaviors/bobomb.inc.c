@@ -410,6 +410,27 @@ void bobomb_buddy_act_turn_to_talk(void) {
     cur_obj_play_sound_2(SOUND_ACTION_READ_SIGN);
 }
 
+void elToad_on_his_way(void) {
+    s16 collisionFlags;
+
+    o->oForwardVel = 20.0f;
+
+    if (gFinalCutsceneFrame == 720) {
+        o->header.gfx.animInfo.animFrame = 0;
+    } else if (gFinalCutsceneFrame < (847 - 15) && o->header.gfx.animInfo.animFrame == 30) {
+        o->header.gfx.animInfo.animFrame = 0;
+    } else if (gFinalCutsceneFrame == (847 - 15)) {
+        o->header.gfx.animInfo.animFrame = 31;
+    } else if (gFinalCutsceneFrame == (856 - 15)) {
+        o->oVelY = 30.0f;
+    } else if (gFinalCutsceneFrame > 866) {
+        o->oForwardVel = 0.0f;
+        o->oMoveAngleYaw = approach_s16_symmetric(o->oMoveAngleYaw, o->oAngleToMario, 0x1000);
+    }
+    collisionFlags = object_step();
+    cur_obj_init_animation(3);
+}
+
 void bobomb_buddy_actions(void) {
     switch (o->oAction) {
         case BOBOMB_BUDDY_ACT_IDLE:
@@ -422,6 +443,10 @@ void bobomb_buddy_actions(void) {
 
         case BOBOMB_BUDDY_ACT_TALK:
             bobomb_buddy_act_talk();
+            break;
+
+        case 4:
+            elToad_on_his_way();
             break;
     }
 
@@ -451,7 +476,7 @@ void bhv_bobomb_buddy_loop(void) {
             falloff = 80;
             break;
     }
-    cur_obj_init_animation(anim);
+    if (o->oAction != 4) cur_obj_init_animation(anim);
     curr_obj_random_blink(&o->oBobombBuddyBlinkTimer);
 
     u8 r = (o->oPrimRGB >> 16) & 0xff;

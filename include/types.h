@@ -349,6 +349,7 @@ struct MarioState
              s16 force2;
              u32 instFlags;
              s8 instChanged;
+             struct Object *boat;
 };
 
 #define INST_FLAG_DRUMS (1 << 0)
