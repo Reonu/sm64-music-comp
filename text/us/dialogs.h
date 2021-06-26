@@ -1672,7 +1672,7 @@ can't quite vibe yet."))
 DEFINE_DIALOG(DIALOG_143, 1, 4, 150, 200, _("\
 You have all the\n\
 instruments! You\n\
-should go back with\n\
+should go back to\n\
 the Toads!"))
 
 DEFINE_DIALOG(DIALOG_144, 1, 6, 150, 200, _("\
