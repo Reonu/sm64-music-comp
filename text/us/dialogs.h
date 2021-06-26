@@ -60,7 +60,8 @@ as always for the help.\n\
 Shoutouts to Simpleflips\n\
 for choosing literally\n\
 my busiest month of\n\
-the year to host the comp"))
+the year to host the comp\n\
+"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
 Without our music, it's\n\
@@ -85,6 +86,7 @@ baile, estos estupidos\n\
 Toads se piensan que\n\
 vengo de fiesta!\n\
 \n\
+\n\
 No entienden ni una\n\
 puta palabra de lo que\n\
 digo! Tio, esto es\n\
@@ -92,11 +94,11 @@ exactamente el tipo de\n\
 cosa que SIEMPRE me pasa\n\
 a mi.\n\
 He tenido mala suerte\n\
-desde que robe una figura\n\
+desde que robe una mu[C]eca\n\
 de vudu de una bruja,\n\
-pero tenia 6 anos y no\n\
-sabia que tenia significado\n\
-religioso.\n\
+pero tenia 6 a[C]os y no\n\
+sabia que tenia\n\
+significado religioso.\n\
 En fin."))
 
 DEFINE_DIALOG(DIALOG_005, 1, 2, 30, 200, _("\
