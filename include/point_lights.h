@@ -13,7 +13,7 @@
 #define LIGHT_FLAG_OCCLUDE (1 << 0)
 
 // The max number of point lights you can have in a scene (impacts RAM)
-#define MAX_POINT_LIGHTS 32
+#define MAX_POINT_LIGHTS 64
 // The max number of point lights that can be affecting a given model (impacts performance)
 #define MAX_POINT_LIGHTS_ACTIVE 5
 
