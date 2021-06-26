@@ -75,29 +75,29 @@ Well, it's even stronger\n\
 when we have our music..."))
 
 DEFINE_DIALOG(DIALOG_004, 1, 6, 95, 200, _("\
-Nadie me entiende!\n\
-Acabe aqui sin querer\n\
+[Z]Nadie me entiende!\n\
+[Z]Acab[A] aqu[R] sin querer\n\
 mientras viajaba a\n\
 Tenerife porque de\n\
 repente hubo tormenta y\n\
 me trajo a esta costa!\n\
-Y como tengo la ropa de\n\
-baile, estos estupidos\n\
+[Z]Y como tengo la ropa de\n\
+baile, estos est[B]pidos\n\
 Toads se piensan que\n\
 vengo de fiesta!\n\
 \n\
 \n\
-No entienden ni una\n\
+[Z]No entienden ni una\n\
 puta palabra de lo que\n\
-digo! Tio, esto es\n\
+digo! T[R]o, [Z]esto es\n\
 exactamente el tipo de\n\
 cosa que SIEMPRE me pasa\n\
-a mi.\n\
+a m[R]!\n\
 He tenido mala suerte\n\
-desde que robe una mu[C]eca\n\
-de vudu de una bruja,\n\
-pero tenia 6 a[C]os y no\n\
-sabia que tenia\n\
+desde que rob[A] una mu[C]eca\n\
+de vud[B] de una bruja,\n\
+pero ten[R]a 6 a[C]os y no\n\
+sabia que ten[R]a\n\
 significado religioso.\n\
 En fin."))
 
@@ -1658,42 +1658,22 @@ Left: Black Hole\n\
 ///Elevator 1\n\
 Arrow: You are here"))
 
-DEFINE_DIALOG(DIALOG_141, 1, 5, 150, 200, _("\
-You've recovered one of\n\
-the stolen Power Stars!\n\
-Now you can open some of\n\
-the sealed doors in the\n\
-castle.\n\
-Try the Princess's room\n\
-on the second floor and\n\
-the room with the\n\
-painting of Whomp's\n\
-Fortress on Floor 1.\n\
-Bowser's troops are still\n\
-gaining power, so you\n\
-can't give up. Save us,\n\
-Mario! Keep searching for\n\
-Stars!"))
+DEFINE_DIALOG(DIALOG_141, 1, 4, 150, 200, _("\
+You got your first\n\
+instrument! You can\n\
+start to feel the\n\
+rhythm!"))
 
-DEFINE_DIALOG(DIALOG_142, 1, 5, 150, 200, _("\
-You've recovered three\n\
-Power Stars! Now you can\n\
-open any door with a 3\n\
-on its star.\n\
-\n\
-You can come and go from\n\
-the open courses as you\n\
-please. The enemies ahead\n\
-are even meaner, so be\n\
-careful!"))
+DEFINE_DIALOG(DIALOG_142, 1, 3, 150, 200, _("\
+2 instruments! You're\n\
+almost there, but you\n\
+can't quite vibe yet."))
 
-DEFINE_DIALOG(DIALOG_143, 1, 6, 150, 200, _("\
-You've recovered eight of\n\
-the Power Stars! Now you\n\
-can open the door with\n\
-the big Star! But Bowser\n\
-is just ahead...can you\n\
-hear the Princess calling?"))
+DEFINE_DIALOG(DIALOG_143, 1, 4, 150, 200, _("\
+You have all the\n\
+instruments! You\n\
+should go back with\n\
+the Toads!"))
 
 DEFINE_DIALOG(DIALOG_144, 1, 6, 150, 200, _("\
 You've recovered 30\n\
