@@ -82,9 +82,9 @@ const GeoLayout bob_area_3[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(6, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
