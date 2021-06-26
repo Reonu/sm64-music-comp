@@ -508,6 +508,22 @@ s8 is_point_within_radius_of_mario(f32 x, f32 y, f32 z, s32 dist) {
 }
 
 /**
+ * Checks if a point is within distance from Mario's graphical position. Test is exclusive.
+ */
+s8 is_point_within_radius_of_camera(f32 x, f32 y, f32 z, s32 dist) {
+    f32 mGfxX = gLakituState.pos[0];
+    f32 mGfxY = gLakituState.pos[1];
+    f32 mGfxZ = gLakituState.pos[2];
+
+    if ((x - mGfxX) * (x - mGfxX) + (y - mGfxY) * (y - mGfxY) + (z - mGfxZ) * (z - mGfxZ)
+        < (f32)(dist * dist)) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
  * Checks whether a point is within distance of a given point. Test is exclusive.
  */
 s8 is_point_close_to_object(struct Object *obj, f32 x, f32 y, f32 z, s32 dist) {
@@ -530,6 +546,11 @@ void set_object_visibility(struct Object *obj, s32 dist) {
     f32 objX = obj->oPosX;
     f32 objY = obj->oPosY;
     f32 objZ = obj->oPosZ;
+
+    if (gShowingFinalCutscene && is_point_within_radius_of_camera(objX, objY, objZ, dist)) {
+        obj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
+        return;
+    }
 
     if (is_point_within_radius_of_mario(objX, objY, objZ, dist) == TRUE) {
         obj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;

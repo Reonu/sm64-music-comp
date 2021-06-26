@@ -250,6 +250,7 @@ const LevelScript script_func_global_5[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SUSHI,                   sushi_geo),
     LOAD_MODEL_FROM_DL( MODEL_DL_WHIRLPOOL,            whirlpool_seg5_dl_05013CB8, LAYER_TRANSPARENT),
     LOAD_MODEL_FROM_GEO(MODEL_CLAM_SHELL,              clam_shell_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_BOAT,                    boat_geo),
     RETURN(),
 };
 
