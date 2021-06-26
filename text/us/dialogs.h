@@ -44,16 +44,16 @@ Welcome to Treble in\n\
 Paradise, made by\n\
 Reonu and thecozies!\n\
 \n\
+Level design by Reonu.\n\
+Music by thecozies.\n\
 \n\
-\n\
-\n\
+Reonu:\n\
 This hack uses my epic\n\
 custom camera, you can\n\
 rotate it slowly by\n\
 holding the C buttons\n\
 or flick it by tapping\n\
 them.\n\
-\n\
 Thanks to the entire\n\
 Simpleflips community\n\
 as always for the help.\n\
@@ -146,14 +146,9 @@ Would you like to Save?\n\
 \n\
 //Yes////No"))
 
-DEFINE_DIALOG(DIALOG_011, 1, 4, 30, 200, _("\
-I see you got one of\n\
-the instruments,\n\
-good job! We can\n\
-finally start vibing!\n\
-But we still need the\n\
-rest if we want to\n\
-REALLY vibe"))
+DEFINE_DIALOG(DIALOG_011, 1, 2, 30, 200, _("\
+Espera!! No me dejes\n\
+aqui!!"))
 
 DEFINE_DIALOG(DIALOG_012,  1, 2, 30, 200, _("\
 What? I'm literally\n\
