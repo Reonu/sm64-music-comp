@@ -461,15 +461,15 @@ void bhv_bobomb_buddy_loop(void) {
     switch (gMarioState->numStars) {
         case 00:
             anim = 0;
-            falloff = 150;
+            falloff = 90;
             break;
         case 01:
             anim = 1;
-            falloff = 120;
+            falloff = 85;
             break;
         case 02:
             anim = 1;
-            falloff = 110;
+            falloff = 83;
             break;
         case 03:
             anim = 1;
