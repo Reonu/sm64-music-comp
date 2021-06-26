@@ -378,6 +378,7 @@
 #define MODEL_SUSHI                       0x56        // sushi_geo
 #define MODEL_DL_WHIRLPOOL                0x57        // whirlpool_seg5_dl_05013CB8
 #define MODEL_CLAM_SHELL                  0x58        // clam_shell_geo
+#define MODEL_BOAT                        0x59        // clam_shell_geo
 
 // group 5
 #define MODEL_POKEY_HEAD                  0x54        // pokey_head_geo

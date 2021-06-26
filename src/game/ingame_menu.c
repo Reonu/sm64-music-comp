@@ -769,11 +769,19 @@ void handle_menu_scrolling(s8 scrollDirection, s8 *currentIndex, s8 minIndex, s8
 s16 get_str_x_pos_from_center(s16 centerPos, u8 *str, UNUSED f32 scale) {
     s16 strPos = 0;
     f32 spacesWidth = 0.0f;
+    f32 biggestWidth = 0.0f;
+
 
     while (str[strPos] != DIALOG_CHAR_TERMINATOR) {
-        spacesWidth += gDialogCharWidths[str[strPos]];
+        if (str[strPos] == DIALOG_CHAR_NEWLINE) {
+            if (spacesWidth > biggestWidth) biggestWidth = spacesWidth;
+            spacesWidth = 0.0f;
+        } else {
+            spacesWidth += gDialogCharWidths[str[strPos]];
+        }
         strPos++;
     }
+    spacesWidth = spacesWidth > biggestWidth ? spacesWidth : biggestWidth;
     // return the x position of where the string starts as half the string's
     // length from the position of the provided center.
     return (s16)(centerPos - (s16)(spacesWidth / 2.0));

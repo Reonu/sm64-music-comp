@@ -36,9 +36,11 @@
 #include "PR/gbi.h"
 #include "tile_scroll.h"
 #include "point_lights.h"
+#include "ingame_menu.h"
 
 u32 unused80339F10;
 s8 filler80339F1C[20];
+s8 gReadyForFinalCutscene = FALSE;
 
 /**************************************************
  *                    ANIMATIONS                  *
@@ -1793,6 +1795,7 @@ void handle_inst_volumes(void) {
  */
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
+    static int msg = 0;
     
     if ((gCurrLevelNum == LEVEL_CASTLE_GROUNDS) && (gCurrAreaIndex == 0x01) ) {
         scroll_sts_mat_castle_grounds_dl_waterOpaque_layer1();
@@ -1819,6 +1822,12 @@ s32 execute_mario_action(UNUSED struct Object *o) {
 #ifdef DEBUG_INST
         debug_inst();
 #endif
+
+        if (gMarioState->controller->buttonPressed & R_TRIG) {
+            gShowingFinalCutscene = TRUE;
+            set_mario_action(gMarioState, ACT_FINAL_CUTSCENE, 0);
+        }
+
         handle_inst_volumes();
 
         switch ((gMarioState->force2 >> 8) & 0xFF)  {

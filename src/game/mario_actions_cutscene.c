@@ -1620,6 +1620,109 @@ s32 act_putting_on_cap(struct MarioState *m) {
     return FALSE;
 }
 
+
+void set_m_pos(f32 x, f32 y, f32 z) {
+    gMarioState->pos[0] = x;
+    gMarioState->pos[1] = y;
+    gMarioState->pos[2] = z;
+}
+
+void set_marioobj(void) {
+    vec3f_copy(gMarioObject->header.gfx.pos, gMarioState->pos);
+    vec3s_set(gMarioObject->header.gfx.angle, 0, gMarioState->faceAngle[1], 0);
+}
+
+s16 approach_yaw_sym(s16 curYaw, s16 target, s16 speed) {
+    return (s16) (target - approach_f32_symmetric(
+        (s16) (target - curYaw),
+        0,
+        speed
+    ));
+}
+
+void handle_idle_anim(struct MarioState *m) {
+    switch (m->actionState) {
+        case 0:
+            set_mario_animation(m, MARIO_ANIM_IDLE_HEAD_LEFT);
+            break;
+
+        case 1:
+            set_mario_animation(m, MARIO_ANIM_IDLE_HEAD_RIGHT);
+            break;
+
+        case 2:
+            set_mario_animation(m, MARIO_ANIM_IDLE_HEAD_CENTER);
+            break;
+    }
+
+    if (is_anim_at_end(m)) {
+        if (++m->actionState == 3) {
+            m->actionState = 0;
+        }
+    }
+}
+
+enum {
+    OUTRO_LOOK_AROUND = 360,
+    OUTRO_SHOW_BOAT = 481,
+    OUTRO_PUSHING_BOAT = 660,
+    OUTRO_TOAD_WAIT = 720,
+    OUTRO_LEAVING_ON_BOAT = 910,
+};
+
+// toad pos -386, -8990, 13788
+
+s32 act_final_cutscene(struct MarioState *m) {
+    if (gFinalCutsceneFrame < OUTRO_LOOK_AROUND) {
+        vec3f_copy(m->pos, gLakituState.focus);
+        // m->marioObj->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;
+        return FALSE;
+    }
+
+    m->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
+
+    // dialogs
+    if (gFinalCutsceneFrame == OUTRO_LOOK_AROUND + 5) {
+        set_cutscene_message(SCREEN_WIDTH / 2, 200, 0, 60);
+    }
+    if (gFinalCutsceneFrame == OUTRO_SHOW_BOAT + 5) {
+        set_cutscene_message(SCREEN_WIDTH / 2, 200, 1, 120);
+    }
+    if (gFinalCutsceneFrame == OUTRO_TOAD_WAIT) {
+        set_cutscene_message(SCREEN_WIDTH / 2, 200, 2, 20);
+    }
+    if (gFinalCutsceneFrame == OUTRO_TOAD_WAIT + 40) {
+        set_cutscene_message(SCREEN_WIDTH / 2, 200, 3, 60);
+    }
+    
+
+    if (gFinalCutsceneFrame < OUTRO_PUSHING_BOAT) {
+        m->pos[0] = -386.0f;
+        m->pos[1] = -9118.0f;
+        m->pos[2] = 14397.0f;
+        handle_idle_anim(m);
+        m->faceAngle[1] = DEGREES(180);
+    }
+    else if (gFinalCutsceneFrame < OUTRO_TOAD_WAIT + 15) {
+        m->faceAngle[1] = DEGREES(0);
+        set_m_pos(-370, -9255, 14896);
+        set_mario_animation(m, MARIO_ANIM_PUSHING);
+    }
+    else if (gFinalCutsceneFrame < OUTRO_LEAVING_ON_BOAT) {
+        m->faceAngle[1] = approach_yaw_sym(m->faceAngle[1], DEGREES(180), DEGREES(8)); // no turn towards toad
+        set_m_pos(-370, -9255, 14896);
+        handle_idle_anim(m);
+    } else {
+        if (gFinalCutsceneFrame == OUTRO_LEAVING_ON_BOAT) set_m_pos(-456, -9266, 15238);
+        else m->pos[2] += 10.0f;
+        m->faceAngle[1] = DEGREES(5);
+        handle_idle_anim(m);
+    }
+
+    set_marioobj();
+    return FALSE;
+}
+
 void stuck_in_ground_handler(struct MarioState *m, s32 animation, s32 unstuckFrame, s32 target2,
                              s32 target3, s32 endAction) {
     s32 animFrame = set_mario_animation(m, animation);
@@ -2760,6 +2863,7 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
         case ACT_BUTT_STUCK_IN_GROUND:       cancel = act_butt_stuck_in_ground(m);       break;
         case ACT_FEET_STUCK_IN_GROUND:       cancel = act_feet_stuck_in_ground(m);       break;
         case ACT_PUTTING_ON_CAP:             cancel = act_putting_on_cap(m);             break;
+        case ACT_FINAL_CUTSCENE:             cancel = act_final_cutscene(m);             break;
     }
     /* clang-format on */
 

@@ -330,7 +330,11 @@ void set_mario_initial_action(struct MarioState *m, u32 spawnType, u32 actionArg
             set_mario_action(m, ACT_TELEPORT_FADE_IN, 0);
             break;
         case MARIO_SPAWN_INSTANT_ACTIVE:
-            set_mario_action(m, ACT_IDLE, 0);
+            if (gReadyForFinalCutscene && gCurrLevelNum == LEVEL_CASTLE_GROUNDS) {
+                set_mario_action(m, ACT_FINAL_CUTSCENE, 0);
+                gShowingFinalCutscene = TRUE;
+            }
+            else set_mario_action(m, ACT_IDLE, 0);
             gMarioState->health = 0x800;
             break;
         case MARIO_SPAWN_AIRBORNE:
