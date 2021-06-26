@@ -6178,3 +6178,10 @@ const BehaviorScript bhvSnap2d[] = {
         CALL_NATIVE(bhv_snap_2d_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvLamp[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_lamp_loop),
+    END_LOOP(),
+};

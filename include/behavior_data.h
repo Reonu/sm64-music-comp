@@ -546,5 +546,6 @@ extern const BehaviorScript bhvToadHeadphones[];
 extern const BehaviorScript bhvGreenSpring[];
 extern const BehaviorScript bhvWoodPlatform[];
 extern const BehaviorScript bhvSnap2d[];
+extern const BehaviorScript bhvLamp[];
 
 #endif // BEHAVIOR_DATA_H
