@@ -24,7 +24,11 @@
 #define BUGFIX_STAR_BOWSER_KEY (0 || VERSION_US || VERSION_EU || VERSION_SH)
 
 // Support Rumble Pak
+// Currently not recommended, as it may cause random crashes.
 //#define ENABLE_RUMBLE (1 || VERSION_SH)
+
+// Clear RAM on boot
+#define CLEARRAM 1
 
 // Screen Size Defines
 #define SCREEN_WIDTH 320
@@ -62,6 +66,22 @@
 #define DISABLE_AA
 // Fix instant warp offset not working when warping across different areas
 #define INSTANT_WARP_OFFSET_FIX
+// Allows Mario to ledgegrab sloped floors
+#define NO_FALSE_LEDGEGRABS
+// Allows Mario to jump kick on steep surfaces that are set to be non slippery, instead of being forced to dive
+#define JUMP_KICK_FIX
+// Disables fall damage
+#define NO_FALL_DAMAGE
+// Disables the scream that mario makes when falling off a great height (this is separate from actual fall damage)
+//#define NO_FALL_DAMAGE_SOUND
+// Number of coins to spawn the "100 coin" star. If you remove the define altogether, then there won't be a 100 coin star at all.
+#define X_COIN_STAR 100
+// Platform displacement 2 also known as momentum patch. Makes Mario keep the momemtum from moving platforms. Breaks treadmills.
+#define PLATFORM_DISPLACEMENT_2
+// Whether a tree uses snow particles or not is decided via the model IDs instead of the course number
+#define TREE_PARTICLE_FIX
+// Stars don't kick you out of the level
+// #define NON_STOP_STARS
 // Uncomment this if you want global star IDs (useful for creating an open world hack ala MVC)
 //#define GLOBAL_STAR_IDS
 // Uncomment this if you want to skip the title screen (Super Mario 64 logo)
@@ -71,19 +91,6 @@
 // Number of possible unique model ID's (keep it higher than 256)
 #define MODEL_ID_COUNT 256
 
-/* Coordinate overflow fix setting: 
- * Scales the world down by this factor, increasing how far you can render on
- * console and LLE plugins in exchange for a slight loss in precision.
- * 
- * For double extended boundary hacks, a value of 1.5f or 2.0f is good.
- * For quadruple extended bounds, use 3.f or 4.f
- * 
- * In a nutshell: 
- * - If you're not using extbounds, set this to 1.f.
- * - If you're using 2x bounds, set this to 2.f
- * - If you're using 4x bounds, use a value between 3.f and 4.f, depending on whether you're filling up the entire 4x bounds or not.
- * If you want to change the extended bounds mode, go to src/engine/extended_bounds.h
- */
-#define WORLD_SCALE 2.f
+// If you want to change the extended boundaries mode, go to engine/extended_bounds.h and change EXTENDED_BOUNDS_MODE
 
 #endif // CONFIG_H
