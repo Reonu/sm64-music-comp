@@ -3,6 +3,7 @@
 const GeoLayout castle_grounds_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_0_Wall_NoZBuffer_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -156, -6585, 8735, castle_grounds_dl_A_TopGround_mesh_layer_1),
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(4, castle_grounds_dl_A_TopGround_mesh_layer_4),
@@ -195,7 +196,6 @@ const GeoLayout castle_grounds_area_1_geo[] = {
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(4, castle_grounds_dl_Z_Houses_mesh_layer_4),
 		GEO_CLOSE_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_Z_Wall_001_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -1604, -7985, 10605, castle_grounds_dl_Z_WallVisual_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -9289, 0, castle_grounds_dl_Z_Water_mesh_layer_1),
 		GEO_OPEN_NODE(),
@@ -227,8 +227,8 @@ const GeoLayout castle_grounds_area_1[] = {
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(4, castle_grounds_dl_material_revert_render_settings),
-		GEO_DISPLAY_LIST(5, castle_grounds_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(1, castle_grounds_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(5, castle_grounds_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
