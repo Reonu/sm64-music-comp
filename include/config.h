@@ -70,6 +70,8 @@
 #define NO_FALSE_LEDGEGRABS
 // Allows Mario to jump kick on steep surfaces that are set to be non slippery, instead of being forced to dive
 #define JUMP_KICK_FIX
+// Allow Mario to grab hangable ceilings from any state
+#define HANGING_FIX
 // 46 degree walkicks
 //#define WALLKICKS_46_DEGREES
 // Disables fall damage
@@ -82,6 +84,14 @@
 #define PLATFORM_DISPLACEMENT_2
 // Whether a tree uses snow particles or not is decided via the model IDs instead of the course number
 #define TREE_PARTICLE_FIX
+// Disable exit course
+//#define DISABLE_EXIT_COURSE
+// Decides which level "exit course" takes you to (has no effect if you disable exit course)
+#define EXIT_COURSE_LEVEL LEVEL_CASTLE
+// Decides the area node "exit course" takes you to (has no effect if you disable exit course)
+#define EXIT_COURSE_AREA 0x01
+// Decides the warp node "exit course" takes you to (has no effect if you disable exit course)
+#define EXIT_COURSE_NODE 0x1F
 // Stars don't kick you out of the level
 // #define NON_STOP_STARS
 // Uncomment this if you want global star IDs (useful for creating an open world hack ala MVC)

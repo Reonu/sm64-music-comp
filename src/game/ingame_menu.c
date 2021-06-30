@@ -1677,12 +1677,7 @@ void render_pause_castle_main_strings(s16 x, s16 y) {
     }
 #ifdef WIDE
     if (gPlayer1Controller->buttonPressed & L_TRIG){
-        if (!gWidescreen){
-                gWidescreen = 1;
-            }
-        else{
-                gWidescreen = 0;
-            }
+        gWidescreen ^= 1;
     }
 #endif
     gSPDisplayList(gDisplayListHead++, dl_ia_text_begin);
@@ -1758,7 +1753,9 @@ s16 render_pause_courses_and_castle(void) {
         #endif
 
             if (gMarioStates[0].action & ACT_FLAG_PAUSE_EXIT) {
+            #ifndef DISABLE_EXIT_COURSE
                 render_pause_course_options(99, 93, &gDialogLineNum, 15);
+            #endif
             }
 
             if (gPlayer3Controller->buttonPressed & A_BUTTON
