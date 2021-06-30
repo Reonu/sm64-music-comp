@@ -11,6 +11,7 @@
 #include "shadow.h"
 #include "sm64.h"
 #include "game_init.h"
+#include "engine/extended_bounds.h"
 
 #include "config.h"
 
@@ -663,7 +664,7 @@ void geo_process_camera(struct GraphNodeCamera *node) {
     mtxf_to_mtx(mtx, gMatStack[gMatStackIndex]);
     
 
-   /* if (gPlayer1Controller->buttonPressed & L_TRIG)
+    /*if (gPlayer1Controller->buttonPressed & L_TRIG)
         gPointLightCompatibilityMode ^= 1;*/
 
     viewMat = &gMatStack[gMatStackIndex];

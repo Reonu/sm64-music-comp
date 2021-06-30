@@ -746,11 +746,12 @@ u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *
     m->healCounter += 4 * o->oDamageOrCoinValue;
 
     o->oInteractStatus = INT_STATUS_INTERACTED;
-
-    if (COURSE_IS_MAIN_COURSE(gCurrCourseNum) && m->numCoins - o->oDamageOrCoinValue < 100
-        && m->numCoins >= 100) {
+#ifdef X_COIN_STAR
+    if (COURSE_IS_MAIN_COURSE(gCurrCourseNum) && m->numCoins - o->oDamageOrCoinValue < X_COIN_STAR
+        && m->numCoins >= X_COIN_STAR) {
         bhv_spawn_star_no_level_exit(6);
     }
+#endif
 #if ENABLE_RUMBLE
     if (o->oDamageOrCoinValue >= 2) {
         queue_rumble_data(5, 80);
@@ -768,7 +769,11 @@ u32 interact_water_ring(struct MarioState *m, UNUSED u32 interactType, struct Ob
 
 u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
     u32 starGrabAction = ACT_STAR_DANCE_EXIT;
+#ifdef NON_STOP_STARS
     u32 noExit = 1;
+#else
+    u32 noExit = (o->oInteractionSubtype & INT_SUBTYPE_NO_EXIT) != 0;
+#endif
     u32 grandStar = (o->oInteractionSubtype & INT_SUBTYPE_GRAND_STAR) != 0;
 
     if (m->health >= 0x100) {
