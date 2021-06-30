@@ -664,8 +664,8 @@ void geo_process_camera(struct GraphNodeCamera *node) {
     mtxf_to_mtx(mtx, gMatStack[gMatStackIndex]);
     
 
-    if (gPlayer1Controller->buttonPressed & L_TRIG)
-        gPointLightCompatibilityMode ^= 1;
+    /*if (gPlayer1Controller->buttonPressed & L_TRIG)
+        gPointLightCompatibilityMode ^= 1;*/
 
     viewMat = &gMatStack[gMatStackIndex];
 
