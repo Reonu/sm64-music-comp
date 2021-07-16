@@ -1288,9 +1288,9 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->controller->buttonDown & A_BUTTON) {
         m->input |= INPUT_A_DOWN;
     }
-    if (m->controller->buttonPressed & L_TRIG) {
-        gCustomDebugMode ^= 1;
-    }
+    //if (m->controller->buttonPressed & L_TRIG) {
+        //gCustomDebugMode ^= 1;
+    //}
     if (gCustomDebugMode) {
         if (m->controller->buttonPressed & L_JPAD) {
             if (gMarioState->action == ACT_DEBUG_FREE_MOVE) {

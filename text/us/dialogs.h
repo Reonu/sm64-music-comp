@@ -54,14 +54,20 @@ rotate it slowly by\n\
 holding the C buttons\n\
 or flick it by tapping\n\
 them.\n\
+If you're playing on\n\
+Parallel Launcher, \n\
+set Input Mode to\n\
+Dual Analog in order\n\
+to get analog camera\n\
+controls.\n\
+\n\
 Thanks to the entire\n\
 Simpleflips community\n\
 as always for the help.\n\
 Shoutouts to Simpleflips\n\
 for choosing literally\n\
 my busiest month of\n\
-the year to host the comp\n\
-"))
+the year to host the comp"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
 Without our music, it's\n\
@@ -135,18 +141,8 @@ You should come visit\n\
 us after collecting\n\
 each instrument!"))
 
-DEFINE_DIALOG(DIALOG_010, 1, 4, 30, 200, _("\
-You've stepped on the\n\
-Wing Cap Switch. Wearing\n\
-the Wing Cap, you can\n\
-soar through the sky.\n\
-Now Wing Caps will pop\n\
-out of all the red blocks\n\
-you find.\n\
-\n\
-Would you like to Save?\n\
-\n\
-//Yes////No"))
+DEFINE_DIALOG(DIALOG_010, 1, 1, 30, 200, _("\
+Hi Mario!"))
 
 DEFINE_DIALOG(DIALOG_011, 1, 2, 30, 200, _("\
 Espera!! No me dejes\n\
@@ -1768,21 +1764,8 @@ If you slide really\n\
 fast, you'll win the Star!"))
 
 DEFINE_DIALOG(DIALOG_150, 1, 5, 30, 200, _("\
-Waaaa! You've flooded my\n\
-house! Wh-why?? Look at\n\
-this mess! What am I\n\
-going to do now?\n\
-\n\
-The ceiling's ruined, the\n\
-floor is soaked...what to\n\
-do, what to do? Huff...\n\
-huff...it makes me so...\n\
-MAD!!!\n\
-Everything's been going\n\
-wrong ever since I got\n\
-this Star...It's so shiny,\n\
-but it makes me feel...\n\
-strange..."))
+The view is great from\n\
+here, isn't it?"))
 
 DEFINE_DIALOG(DIALOG_151, 1, 4, 30, 200, _("\
 I can't take this\n\

@@ -2259,7 +2259,7 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
     sAreaYaw = camYaw;
     calc_y_to_curr_floor(&posY, 1.f, 200.f, &focusY, 0.9f, 200.f);
     if (gMarioState->floor != NULL) {
-        if (gMarioState->floor->type != SURFACE_NO_CAM_COLLISION) {
+        if (gMarioState->floor->type != SURFACE_NO_CAM_COLLISION && gMarioState->floor->type != SURFACE_SWITCH) {
             gMarioState->force2 = gMarioState->floor->force;
         }
     }
